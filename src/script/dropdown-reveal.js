@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   goBack.addEventListener('click', () => {
-    location.href = 'main.html';
+    location.href = '../index.html';
   });
 
 
