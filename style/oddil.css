@@ -1,0 +1,51 @@
+.container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  font-size: 18.2px;
+
+  top: 17%;
+
+  padding: 50px;
+
+  -webkit-text-stroke: rgb(132, 132, 132) 0.1px;
+}
+
+.kdo-jsme div,
+.kde-jsme div,
+.historie div {
+  transition: all .2s;
+  border-radius: 5px;
+}
+
+.kdo-jsme div:hover,
+.kde-jsme div:hover,
+.historie div:hover {
+  transform: translateY(-1px);
+  background-color: rgba(0, 0, 0, 0.188);
+}
+
+.map {
+  position: relative;
+  height: 400px;
+  width: 500px;
+
+  margin-top: 60px;
+  margin-bottom: 100px;
+
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: linear-gradient(to left, rgb(247, 194, 28), rgb(244, 158, 0));
+}
+
+.adresa {
+  text-align: center;
+}
+
+.historie {
+  line-height: 28px;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/general.css">
+  <link rel="stylesheet" href="style/header.css">
+  <link rel="stylesheet" href="style/footer.css">
+  <link rel="stylesheet" href="style/oddil.css">
+  <title>3. Česká Třebová - Kde jsme?</title>
+  <link rel="icon" href="src/icons/oddil-logo.ico">
+</head>
+
+<body>
+  <img class="background" src="src/background.jpeg" alt="BG IMAGE">
+
+  <header id="header">
+    <img src="src/icons/dropdown.png" alt="Drop Down" class="dropdown-menu" id="dropdown">
+    <img src="src/icons/close.png" alt="Close" class="close-menu" id="close">
+    <img src="src/icons/arrow-left.png" alt="Go Back" class="arrow-left" id="goBack">
+
+    <div class="links" id="links">
+      <a id="oddil" class="oddil active-tab" href="oddil.html">Oddíl</a>
+      <a id="druziny" class="druziny" href="druziny.html">Družiny</a>
+      <a id="akce" class="akce" href="akce.html">Akce</a>
+      <a id="galerie" class="galerie" href="galerie.html">Galerie</a>
+    </div>
+
+    <img src="src/icons/more.png" alt="More" class="more" id="openMore">
+    <div class="oddil-menu" id="oddilMenu">
+      <div class="section" id="aboutUs">O nás</div>
+      <div class="section" id="whereAreWe">Kde jsme?</div>
+      <div class="section" id="history">Historie</div>
+    </div>
+
+    <a class="login" href="account.html">Přihlásit se</a>
+  </header>
+
+  <div class="container">
+    <div class="kde-jsme">
+      <div>Středisko Javor (domov Františka Navary) se nachází na okraji města Česká Třebová u výpadovky na Litomyšl po
+        levé straně. V současné chvíli ho obývá 7 oddílů. Každému přísluší vlastní klubovna. Středisko je vybaveno i
+        jednou, docela velikou, zasedací místností. Adresa je:</div>
+      <br><br>
+      <div class="adresa">Skautské středisko Javor<br>
+        3. chlapecký oddíl<br>
+        Farská 113<br>
+        560 02 Česká Třebová
+      </div>
+      <iframe class="map"
+        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2569.902670632898!2d16.428211412000753!3d49.90063057137357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDnCsDU0JzAyLjMiTiAxNsKwMjUnNTAuOSJF!5e0!3m2!1scs!2scz!4v1690017127809!5m2!1scs!2scz"
+        width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+
+
+  <div w3-include-html="include/footer.html"></div>
+  <script src="src/script/dropdown-reveal.js"></script>
+  <script src="src/script/include.js"></script>
+  <script>
+    includeHTML();
+  </script>
+  <noscript>Povolte JavaScript na vašem prohlížeči pro spuštění stránky</noscript>
+</body>
+
+</html>

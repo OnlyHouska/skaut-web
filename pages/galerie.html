@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/general.css">
+  <link rel="stylesheet" href="style/header.css">
+  <link rel="stylesheet" href="style/footer.css">
+  <link rel="stylesheet" href="style/galerie.css">
+  <title>3. Česká Třebová - Galerie</title>
+  <link rel="icon" href="src/icons/oddil-logo.ico">
+</head>
+<body>
+  <img class="background" src="src/background.jpeg" alt="BG IMAGE">
+
+  <header id="header">
+    <img src="src/icons/dropdown.png" alt="Drop Down" class="dropdown-menu" id="dropdown">
+    <img src="src/icons/close.png" alt="Close" class="close-menu" id="close">
+    <img src="src/icons/arrow-left.png" alt="Go Back" class="arrow-left" id="goBack">
+
+    <div class="links" id="links">
+      <a id="oddil" class="oddil" href="oddil.html">Oddíl</a>
+      <a id="druziny" class="druziny" href="druziny.html">Družiny</a>
+      <a id="akce" class="akce" href="akce.html">Akce</a>
+      <a id="galerie" class="galerie active-tab" href="galerie.html">Galerie</a>
+    </div>
+    
+    <img src="src/icons/more.png" alt="More" class="more" id="openMore">
+    <div class="oddil-menu" id="oddilMenu">
+      <div class="section" id="aboutUs">O nás</div>
+      <div class="section" id="whereAreWe">Kde jsme?</div>
+      <div class="section" id="history">Historie</div>
+    </div>
+    
+    <a class="login" href="account.html">Přihlásit se</a>
+  </header>
+  
+  <gallery>
+    <div class="folder">
+      <img src="src/background.jpeg" alt="Cover IMG" class="cover">
+      <div class="title">Tábor 2023</div>
+    </div>
+  </gallery>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div w3-include-html="include/footer.html"></div>
+  <script src="src/script/dropdown-reveal.js"></script>
+  <script src="src/script/include.js"></script>
+  <script src="src/script/cookies.js"></script>
+  <script>
+    includeHTML();
+  </script>
+  <noscript>Povolte JavaScript na vašem prohlížeči pro spuštění stránky</noscript>
+</body>
+</html>

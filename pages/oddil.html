@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style/general.css">
+  <link rel="stylesheet" href="../style/footer.css">
+  <title>3. Česká Třebová - Kdo jsme?</title>
+  <link rel="icon" href="../src/icons/oddil-logo.ico">
+
+  <link href="../output.css" rel="stylesheet">
+</head>
+
+<body>
+  <img class="background" src="../src/background.jpeg" alt="BG IMAGE">
+
+  <header id="header"
+    class="z-[15] fixed bg-gradient-to-r from-header-1 via-header-2 to-header-3 w-full h-[40px] top-0 transition-all">
+    <img src="../src/icons/dropdown.png" alt="Drop Down"
+      class="inline absolute h-[25px] top-[7px] ml-[48.5%] transition-all cursor-pointer hover:-translate-y-1"
+      id="dropdown">
+    <div class="ml-[48.5%] cursor-pointer">
+      <img src="../src/icons/close.png" alt="Close"
+        class="inline relative h-[25px] top-[-50px] transition-all hover:-translate-y-1" id="close">
+      <img src="../src/icons/arrow-left.png" alt="Go Back"
+        class="inline relative h-[25px] top-[-50px] mr-16 transition-all hover:-translate-x-2" id="goBack">
+    </div>
+
+    <links
+      class="w-full relative hidden transition-all text-center opacity-0 text-orange-400 mt-[42px] text-xl line-space-none"
+      id="links">
+      <a id="oddil" class="active-tab hover:opacity-70 transition-all" href="oddil.html">Oddíl</a>
+      <img src="../src/icons/more.png" alt="More"
+        class="relative mr-[30px] inline h-[17px] hover:transform rotate-[360]" id="openMore">
+      <a id="druziny" class="relative mr-[30px] hover:opacity-70 transition-all" href="druziny.html">Družiny</a>
+      <a id="akce" class="relative mr-[30px] hover:opacity-70 transition-all" href="akce.html">Akce</a>
+      <a id="galerie" class="relative mr-[30px] hover:opacity-70 transition-all" href="galerie.html">Galerie</a>
+    </links>
+
+    <oddilmenu
+      class="hidden w-[125px] z-10 relative text-center justify-center flex-col ml-[29%] mt-2 cursor-pointer transition-all"
+      id="oddilMenu">
+      <div class="bg-oddil-menu transition-all hover:opacity-90 p-1" id="aboutUs">O nás</div>
+      <div class="bg-oddil-menu transition-all hover:opacity-90 p-1" id="whereAreWe">Kde jsme?</div>
+      <div class="bg-oddil-menu transition-all hover:opacity-90 p-1" id="history">Historie</div>
+    </oddilmenu>
+
+    <a class="absolute right-[15px] top-[10px] text-[14px] font-[Skaut-text] underline text-slate-300" href="account.html">Přihlásit se</a>
+  </header>
+
+  <div class="text-[18.2px] relative z-[3] justify-center text-center font-[Skaut-text-bold] mx-[80px] mt-[140px] mb-[80px]">
+    <div class="transition-all rounded hover:-translate-y-1 hover:bg-oddil-hover">
+      Jak Ti již, sestro, či bratře, došlo, jsme 3. chlapecký oddíl z České Třebové. Sídlíme ve středisku Javor, v
+      domově Františka Navary.
+    </div>
+    <br>
+    <br>
+    <div class="transition-all rounded hover:-translate-y-1 hover:bg-oddil-hover">
+      V oddíle máme 4 družiny – Krahujci Racci Ostříži a Jestřábi. A jestliže je tvé oko pozorné, lze v těchto názvech
+      vidět i jistou symetrii. Je pravda, že všichni jsou obratlovci – ptáci, ale hlavně při poskládání prvních písmen
+      jejich jmen, lze dostat slovo KROJ. Z toho je vidět, že ctíme skautskou symboliku se vší vervou. V letech 2007 –
+      2008 jsme ještě založili žlutou družinu – ta se však postupem času přesunula do tradičních družin.
+    </div>
+    <br>
+    <br>
+    <div class="transition-all rounded hover:-translate-y-1 hover:bg-oddil-hover">
+      V současnosti máme tři družiny – jednu vlčáckou, dvě skautské a jedna není obsazena. Více se o jednotlivých
+      družinách dozvíš v jejich sekcích. Jako jednotný oddíl máme rádi přírodu a hlavně zábavu. Je u nás zaveden
+      zvláštní sytém výchovy, který nám zaručuje dlouhodobý vliv na členy oddílu, i když jej opustí.
+    </div>
+    <br>
+    <br>
+    <div class="transition-all rounded hover:-translate-y-1 hover:bg-oddil-hover">
+      Každoročně pořádáme akci zvanou Memoriál Břetislava (Břéti) Hampla. Na počest našeho zesnulého vedoucího jsme
+      pořádali výstavu fotografií pod názvem Okem Evži Šimka. Ten nás náhle a tragicky opustil v době nejtěžší – v
+      době povodní roku 1997.
+    </div>
+  </div>
+
+
+  <div w3-include-html="../include/footer.html"></div>
+  <script src="../src/script/dropdown-reveal.js"></script>
+  <script src="../src/script/include.js"></script>
+  <script>
+    includeHTML();
+  </script>
+  <noscript>Povolte JavaScript na vašem prohlížeči pro spuštění stránky</noscript>
+</body>
+
+</html>

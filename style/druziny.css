@@ -1,0 +1,89 @@
+@keyframes float {
+  0% {transform: translateY(0px);}
+  50% {transform: translateY(5px);}
+  100% {transform: translateY(-0px);}
+}
+
+.container {
+  z-index: 2;
+  position: absolute;
+
+  top: 150px;
+  left: 18%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1000px;
+}
+
+.ostrizi {
+  background: linear-gradient(rgb(140, 94, 14), rgb(114, 77, 11));
+  animation-delay: 0.7s;
+}
+
+.krahujci {
+  background: linear-gradient(rgb(71, 101, 29), rgb(53, 76, 21));
+}
+
+.racci {
+  background: linear-gradient(rgb(107, 149, 201), rgb(73, 101, 135));
+  animation-delay: 0.5s;
+}
+
+.ostrizi,
+.racci,
+.krahujci {
+  animation-name: float;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+
+  border-style: solid;
+  border-color: black;
+  border-width: 4px;
+  border-radius: 7px;
+
+  width: 300px;
+  height: 500px;
+  margin-right: 20px;
+  padding: 5px;
+  
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.pokrik {
+  font-family: Skaut-text-italic;
+}
+
+.members-button {
+  position: absolute;
+  font-family: Skaut-text-bold;
+  bottom: 20px;
+  margin-left: 105px;
+
+  
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 4px;
+  height: 30px;
+  width: 90px;
+
+  background-color: rgb(182, 184, 186);
+
+  transition: all .2s;
+}
+
+.members-button:hover {
+  opacity: 0.9;
+  transform: rotate(3deg);
+}
+
+.members-button:active {
+  transform: rotate(-3deg);
+  background-color: rgb(152, 153, 154);
+}

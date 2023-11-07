@@ -1,0 +1,70 @@
+@font-face {
+  font-family: TITLES;
+  src: url(../src/fonts/SKAUT-Bold.otf);
+}
+
+@font-face {
+  font-family: Skaut-text;
+  src: url(../src/fonts/TheMixC5-4_SemiLight.otf);
+}
+
+@font-face {
+  font-family: Skaut-text-italic;
+  src: url(../src/fonts/TheMixC5-4iSemiLightIta.otf);
+}
+
+@font-face {
+  font-family: Skaut-text-bold;
+  src: url(../src/fonts/TheMixC5-7_Bold.otf);
+}
+
+@font-face {
+  font-family: Skaut-text-bold-italic;
+  src: url(../src/fonts/TheMixC5-7iBoldItalic.otf);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'TITLES';
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.background {
+  opacity: .41;
+ 
+  z-index: 0;
+  position: fixed;
+
+  top: -250px;
+  left: -20px;
+}
+
+.background img {
+  display: block;
+  margin: 0;
+}
+
+button {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+input {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background: linear-gradient(rgb(40, 73, 132), rgb(56, 121, 181),black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(rgb(244, 158, 0), rgb(252, 191, 30));
+}

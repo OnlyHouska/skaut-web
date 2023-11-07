@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style/general.css">
+  <link rel="stylesheet" href="../style/hover-events.css">
+  <!-- <link rel="stylesheet" href="../style/main.css"> -->
+  <title>3. Česká Třebová</title>
+  <link rel="icon" href="../src/icons/oddil-logo.ico">
+
+  <link rel="stylesheet" href="../output.css">
+</head>
+
+<body class="overflow-visible">
+  <div>
+    <a href="https://skaut.cz" target="_blank">
+      <img
+        class="transition-all absolute h-40 z-10 cursor-pointer hover:transform hover:rotate-[5deg] hover:scale-[1.02]"
+        src="../src/icons/skaut-logo.png" alt="SKAUT LOGO">
+    </a>
+    <div class="background" id="background">
+      <img src="../src/background.jpeg" alt="BG IMAGE">
+    </div>
+  </div>
+
+  <header class="flex flex-row justify-center text-center z-10">
+    <div class="relative flex flex-row justify-center text-center mt-[220px]" id="sections">
+      <div class="relative flex flex-col text-center justify-center index-title-sections">
+        <h1 class="transition-all text-[52px] text-gray title-stroke index-title" id="title">Trojka Česká Třebová</h1>
+        <div
+          class="transition-all relative opacity-0 flex justify-center text-center  w-full scale-[0.7] mt-3 index-title-links text-2xl text-gray">
+          <a id="oddil" class="ml-4 mr-[30px] links-stroke" href="oddil.html">Oddíl</a>
+          <a id="druziny" class="mr-[30px] links-stroke" href="druziny.html">Družiny</a>
+          <a id="akce" class="mr-[30px] links-stroke" href="akce.html">Akce</a>
+          <a id="galerie" class="mr-[30px] links-stroke" href="galerie.html">Galerie</a>
+        </div>
+      </div>
+      <div class="relative opacity- flex justify-center text-center flex-col w-[160px] h-fit bg-gradient-to-r from-[#fcbf1e] via-[#f8b100] to-[#f49e00] pb-[7px] px-[10px] rounded-[8px] text-[14px] ml-7"
+        id="hoverAboveMessage">
+        <div
+          class="relative top-[5px] -left-[18px] w-0 h-0 border-y-[10px] border-solid border-y-transparent border-r-[10px] border-r-[#fcbf1e]">
+        </div>
+        <div class="-mt-1">
+          <strong>Přejeď po mně!</strong>
+        </div>
+        <div class="mt-[5px] font-[Skaut-text-bold]">
+          Pro zobrazení nabídky přejeď po nadpisu.
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </header>
+
+  <script src="../src/script/inactive.js"></script>
+  <noscript>Povolte JavaScript na vašem prohlížeči pro spuštění stránky</noscript>
+</body>
+
+</html>

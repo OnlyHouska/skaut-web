@@ -1,0 +1,51 @@
+gallery {
+  display: flex;
+  position: absolute;
+  flex-direction: row;
+  justify-content: space-between;
+
+  align-items: center;
+
+  top: 35%;
+  left: 44%;
+}
+
+.folder {
+  cursor: pointer;
+  background-color: white;
+  height: 150px;
+  max-width: 250px;
+  
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: linear-gradient(to left, rgb(247, 194, 28), rgb(244, 158, 0));
+
+  transition: all .2s;
+}
+
+.cover {
+  position: relative;
+  height: inherit;
+  opacity: 0.7;
+
+  transition: all .2s;
+}
+
+.folder:hover .cover {
+  opacity: 1;
+}
+
+.folder:hover .title {
+  transform: translateY(-100px);
+  -webkit-text-stroke: 1.5px white;
+
+}
+
+.title {
+  position: relative;
+  text-align: center;
+  top: 5px;
+  font-size: 20px;
+  transition: all .2s;
+}
