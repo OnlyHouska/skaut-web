@@ -1,1 +1,1 @@
-ÿþ
+[idk](https://trojkact.skauting.cz/wp/)
