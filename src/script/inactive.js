@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
   
   function doSomethingAfterDelay() {
     hoverMe.style.opacity = 1;
+    hoverMe.style.zIndex = 1;
   }
   
   function StartHoverTimer() {
@@ -18,6 +19,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
   function ResetHoverTimer() {
     clearTimeout(hoverTimer);
     hoverMe.style.opacity = 0;
+    hoverMe.style.zIndex = -10;
   }
   
 

@@ -28,21 +28,24 @@ document.addEventListener('DOMContentLoaded', () => {
     )
   });
 
-  closeBtn.addEventListener('click', () => {
-    header.style.height = '40px';
-    dropdown.style.top = '9px';;
-
-    closeBtn.style.top = '-60px';
-    goBack.style.top = '-60px';
-    oddilMore.style.top = '-60px';
-    CloseOddilMore();
-
-    links.style.opacity = 0;
-    setTimeout(() => {
-      links.style.display = 'none';
-    }, 100
-    );
-  });
+  function closeMenu() {
+    closeBtn.addEventListener('click', () => {
+      header.style.height = '40px';
+      dropdown.style.top = '9px';;
+  
+      closeBtn.style.top = '-60px';
+      goBack.style.top = '-60px';
+      oddilMore.style.top = '-60px';
+      CloseOddilMore();
+  
+      links.style.opacity = 0;
+      setTimeout(() => {
+        links.style.display = 'none';
+      }, 100
+      );
+    });
+  }
+  closeMenu();
 
   goBack.addEventListener('click', () => {
     location.href = '../index.html';
@@ -61,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function OpenOddilMore() {
     menuActive = true;
     oddilMoreContainer.style.display = 'block';
-    oddilMore.style.rotate = '45deg';
+    oddilMore.style.transform = 'rotate(45deg)';
     setTimeout(() => {
       oddilMoreContainer.style.opacity = 1;
       document.addEventListener('click', outsideClickHandler);
@@ -72,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function CloseOddilMore() {
     menuActive = false;
     oddilMoreContainer.style.opacity = 0;
-    oddilMore.style.rotate = '0deg';
+    oddilMore.style.transform = 'rotate(0deg)';
 
     setTimeout(() => {
       oddilMoreContainer.style.display = 'none';
@@ -84,6 +87,10 @@ document.addEventListener('DOMContentLoaded', () => {
   function outsideClickHandler(event) {
     if (!event.target.closest('#oddilMore') && !event.target.closest('#oddilMoreContainer')) {
       CloseOddilMore();
+    }
+
+    if (!event.target.closest('#header')) {
+      closeMenu();
     }
   }
 
