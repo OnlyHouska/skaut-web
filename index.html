@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-[100%] w-[100%] overflow-hidden">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style/general.css">
-  <link rel="stylesheet" href="style/hover-events.css">
   <title>3. Česká Třebová</title>
   <link rel="icon" href="src/icons/oddil-logo.ico">
 
@@ -13,46 +12,92 @@
 </head>
 
 <body class="overflow-visible">
-  <div>
-    <a href="https://skaut.cz" target="_blank">
-      <img class="transition-all absolute h-40 z-10 cursor-pointer hover:transform hover:rotate-[5deg] hover:scale-[1.02]" src="src/icons/skaut-logo.png" alt="SKAUT LOGO">
-    </a>
+  <div class="m-auto align-middle relative">
     <div class="background z-0" id="background">
       <img src="src/background.jpeg" alt="BG IMAGE">
     </div>
   </div>
 
-  <header class="flex flex-row justify-center text-center z-10 ml-[179px]">
-    <div class="relative flex flex-row justify-center text-center mt-[220px]" id="sections">
-      <div class="relative flex flex-col text-center justify-center index-title-sections">
-        <h1 class="transition-all text-[52px] text-gray title-stroke index-title" id="title">Trojka Česká Třebová</h1>
-        <div
-          class="h-fit transition-all relative opacity-0 flex justify-center text-center  w-full scale-[0.7] mt-3 index-title-links text-[27px] text-gray">
-          <a id="oddil" class="ml-4 mr-[30px] links-stroke transition-all ease-in-out hover:transform hover:-translate-y-1" href="pages/oddil.html">Oddíl</a>
-          <a id="druziny" class="mr-[30px] links-stroke transition-all ease-in-out hover:transform hover:-translate-y-1" href="pages/druziny.html">Družiny</a>
-          <a id="akce" class="mr-[30px] links-stroke transition-all ease-in-out hover:transform hover:-translate-y-1" href="pages/akce.html">Akce</a>
-          <a id="galerie" class="mr-[30px] links-stroke transition-all ease-in-out hover:transform hover:-translate-y-1" href="pages/galerie.html">Galerie</a>
-        </div>
-      </div>
-      <div class="-z-10 mt-4 transition-all delay-200 relative opacity-0 flex justify-center text-center flex-col w-[160px] h-fit bg-gradient-to-r from-[#fcbf1e] via-[#f8b100] to-[#f49e00] pb-[7px] px-[10px] rounded-[8px] text-[14px] ml-7"
-        id="hoverAboveMessage">
-        <div
-          class="relative top-[5px] -left-[18px] w-0 h-0 border-y-[10px] border-solid border-y-transparent border-r-[10px] border-r-[#fcbf1e]">
-        </div>
-        <div class="-mt-1">
-          <strong>Přejeď po mně!</strong>
-        </div>
-        <div class="mt-[5px] font-[Skaut-text-bold]">
-          Pro zobrazení nabídky přejeď po nadpisu.
-        </div>
+  <nav class="select-none top-0 absolute flex flex-row justify-center w-full bg-[#ffffff91] z-10 h-[70px] text-2xl text-[#2f4d36]">
+    <div>
+      <h3 onclick="OpenMenu()" class="mt-4 mr-12 cursor-pointer hover:opacity-80 hover:-translate-y-1 transition-all"
+        id="oddil_button">Oddíl</h3>
+      <div
+        class="transition-all opacity-0 hidden relative mt-[22px] bg-[#ffffff91] pl-3 pr-5 py-3 -ml-4 text-xl rounded-br-[15px] rounded-bl-[15px]"
+        id="oddil_menu">
+        <ul>
+          <li class="transition-all mb-2 hover:opacity-80 active:scale-105 hover:translate-x-2">
+            <a href="pages/oddil.html">
+              <h3>O Nás</h3>
+            </a>
+          </li>
+          <li class="transition-all mb-2 hover:opacity-80 active:scale-105 hover:translate-x-2">
+            <a href="pages/kde_jsme.html">
+              <h3>Kde Jsme</h3>
+            </a>
+          </li>
+          <li class="transition-all hover:opacity-80 active:scale-105 hover:translate-x-2">
+            <a href="pages/historie.html">
+              <h3>Historie</h3>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
+    <a href="pages/druziny.html">
+      <h3 class="mt-4 mr-6 cursor-pointer hover:opacity-80 hover:-translate-y-1 transition-all">Družiny</h3>
+    </a>
+    <div
+      class="relative bg-[#ffffff91] mt-[70px] h-24 w-44 rounded-bl-full rounded-br-full flex justify-center align-middle">
+      <a href="https://skaut.cz" target="_blank">
+        <img class="relative h-40 z-10 -mt-[65px] cursor-pointer opacity-100 transition-all hover:transform hover:scale-[1.02]" src="src/icons/skaut-logo.png" alt="SKAUT LOGO">
+      </a>
+    </div>
+    <a href="pages/akce.html">
+      <h3 class="mt-4 ml-6 cursor-pointer hover:opacity-80 hover:-translate-y-1 transition-all">Akce</h3>
+    </a>
+    <a href="pages/galerie.html">
+      <h3 class="mt-4 ml-12 cursor-pointer hover:opacity-80 hover:-translate-y-1 transition-all">Galerie</h3>
+    </a>
+  </nav>
 
-    </div>
+  <header class="relative flex flex-col justify-center text-center mt-[165px]">
+    <h2 class="uppercase text-skaut-orange text-[40px] text-shadow-2xl">Skautský oddíl</h2>
+    <h1 class="uppercase text-[67px] text-white index-title text-shadow-2xl" id="title">Trojka Česká Třebová</h1>
   </header>
 
-  <script src="src/script/inactive.js"></script>
+  <div class="relative bg-[#1d1d1b] opacity-70 h-[500px] w-full mt-10 z-10 p-7">
+    <div class="text-[20px] relative justify-center text-center font-[Skaut-text] mx-[180px] opacity-100 z-20 mt-[55px]">
+      <div
+        class="text-white relative bg-transparent transition-all rounded hover:-translate-y-1 hover:bg-oddil-hover mb-7">
+        Středisko Javor (domov Františka Navary) se nachází na okraji města Česká Třebová u výpadovky na Litomyšl po
+        levé straně. V současné chvíli ho obývá 7 oddílů. Každému přísluší vlastní klubovna. Středisko je vybaveno i
+        jednou, docela velikou, zasedací místností. Adresa je:
+      </div>
+      <div class="text-[#f5b016] transition-all rounded hover:-translate-y-1 hover:bg-oddil-hover mb-7">
+        3. chlapecký oddíl<br>
+        Farská 113<br>
+        560 02 Česká Třebová
+      </div>
+    </div>
+  </div>
+
   <noscript>Povolte JavaScript na vašem prohlížeči pro spuštění stránky</noscript>
+  <script>
+    function OpenMenu() {
+      let oddilButton = document.getElementById('oddil_button');
+      let currentDecoration = oddilButton.style.textDecoration;
+      let oddilMenu = document.getElementById('oddil_menu');
+      let currentState = oddilMenu.style.display;
+      let currentOpacity = oddilMenu.style.opacity;
+
+      oddilButton.style.textDecoration = (currentDecoration === 'underline') ? 'none' : 'underline';
+      oddilMenu.style.display = (currentState === 'block' ? 'none' : 'block');
+      setTimeout(() => {
+        oddilMenu.style.opacity = (currentOpacity === '1' ? '0' : '1');
+      }, 2)
+    }
+  </script>
 </body>
 
 </html>

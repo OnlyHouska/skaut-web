@@ -1,21 +1,53 @@
-<header id="header">
-  <img src="src/icons/dropdown.png" alt="Drop Down" class="dropdown-menu" id="dropdown">
-  <img src="src/icons/close.png" alt="Close" class="close-menu" id="close">
-  <img src="src/icons/arrow-left.png" alt="Go Back" class="arrow-left" id="goBack">
+<!DOCTYPE html>
+<html lang="en">
 
-  <div class="links" id="links">
-    <a id="oddil" class="oddil active-tab" href="oddil.html">Oddíl</a>
-    <a id="druziny" class="druziny" href="druziny.html">Družiny</a>
-    <a id="akce" class="akce" href="akce.html">Akce</a>
-    <a id="galerie" class="galerie" href="galerie.html">Galerie</a>
-  </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../output.css">
+  <link rel="stylesheet" href="../style/general.css">
+</head>
 
-  <img src="src/icons/more.png" alt="More" class="more" id="openMore">
-  <div class="oddil-menu" id="oddilMenu">
-    <div class="section" id="aboutUs">O nás</div>
-    <div class="section" id="whereAreWe">Kde jsme?</div>
-  </div>
+<body>
+  <header id="header"
+    class="z-[15] fixed bg-gradient-to-r from-header-1 via-header-2 to-header-3 w-full h-[40px] top-0 transition-all">
+    <img src="../src/icons/dropdown.png" alt="Drop Down"
+      class="inline absolute h-[25px] top-[7px] ml-[48.5%] transition-all cursor-pointer hover:-translate-y-1"
+      id="dropdown">
+    <div class="ml-[48.5%] cursor-pointer">
+      <img src="../src/icons/close.png" alt="Close"
+        class="inline relative h-[25px] top-[-50px] transition-all hover:-translate-y-1" id="close">
+      <img src="../src/icons/arrow-left.png" alt="Go Back"
+        class="inline relative h-[25px] top-[-50px] mr-16 transition-all hover:-translate-x-2" id="goBack">
+    </div>
 
-  <a class="login" href="account.html">Přihlásit se</a>
+    <links
+      class="w-full relative hidden transition-all text-center opacity-0 text-orange-400 mt-[42px] text-xl line-space-none"
+      id="links">
+      <a id="oddil" class="active-tab hover:opacity-70 transition-all" href="oddil.html">Oddíl</a>
+      <div class="relative mr-[30px] inline h-[17px]">
+        <img src="../src/icons/more.png" alt="More"
+          class="relative mr-[30px] inline h-[17px] hover:transform hover:rotate-[360deg] cursor-pointer" id="openMore"
+          style="transition: transform 1s, top .2s">
+        <oddilmenu
+          class="relative hidden w-[125px] h-6 z-10 text-center justify-center flex-col ml-[32.6%] mt-2 cursor-pointer transition-all"
+          id="oddilMenu">
+          <div class="bg-oddil-menu transition-all hover:opacity-90 p-1" id="aboutUs">O nás</div>
+          <div class="bg-oddil-menu transition-all hover:opacity-90 p-1" id="whereAreWe">Kde jsme?</div>
+          <div class="bg-oddil-menu transition-all hover:opacity-90 p-1" id="history">Historie</div>
+        </oddilmenu>
+      </div>
+      <a id="druziny" class="relative mr-[30px] hover:opacity-70 transition-all" href="druziny.html">Družiny</a>
+      <a id="akce" class="relative mr-[30px] hover:opacity-70 transition-all" href="akce.html">Akce</a>
+      <a id="galerie" class="relative mr-[30px] hover:opacity-70 transition-all" href="galerie.html">Galerie</a>
+    </links>
+
+    <a class="absolute right-[15px] top-[10px] text-[14px] font-[Skaut-text] underline text-slate-300"
+      href="account.html">Přihlásit se</a>
+  </header>
+
   <script src="../src/script/dropdown-reveal.js"></script>
-</header>
+</body>
+
+</html>

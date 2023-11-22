@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './include/footer.html',
+    './include/*.html',
     './index.html',
     './pages/**/*.{html,js}',
     './components/**/*.{html,js}',
@@ -14,7 +14,7 @@ module.exports = {
         'header-3': '#284984',
         'oddil-menu': '#f49e00',
         'oddil-hover': '#00000030',
-        'gray': '#808080'
+        'skaut-orange': '#f5b016'
       }
     },
   },

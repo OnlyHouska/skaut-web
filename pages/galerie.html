@@ -4,35 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style/general.css">
-  <link rel="stylesheet" href="style/header.css">
-  <link rel="stylesheet" href="style/footer.css">
   <link rel="stylesheet" href="style/galerie.css">
   <title>3. Česká Třebová - Galerie</title>
   <link rel="icon" href="src/icons/oddil-logo.ico">
+
+  <link rel="stylesheet" href="../output.css">
 </head>
 <body>
   <img class="background" src="src/background.jpeg" alt="BG IMAGE">
 
-  <header id="header">
-    <img src="src/icons/dropdown.png" alt="Drop Down" class="dropdown-menu" id="dropdown">
-    <img src="src/icons/close.png" alt="Close" class="close-menu" id="close">
-    <img src="src/icons/arrow-left.png" alt="Go Back" class="arrow-left" id="goBack">
+  <header id="header"
+    class="z-[15] fixed bg-gradient-to-r from-header-1 via-header-2 to-header-3 w-full h-[40px] top-0 transition-all">
+    <img src="../src/icons/dropdown.png" alt="Drop Down"
+      class="inline absolute h-[25px] top-[7px] ml-[48.5%] transition-all cursor-pointer hover:-translate-y-1"
+      id="dropdown">
+    <div class="ml-[48.5%] cursor-pointer">
+      <img src="../src/icons/close.png" alt="Close"
+        class="inline relative h-[25px] top-[-50px] transition-all hover:-translate-y-1" id="close">
+      <img src="../src/icons/arrow-left.png" alt="Go Back"
+        class="inline relative h-[25px] top-[-50px] mr-16 transition-all hover:-translate-x-2" id="goBack">
+    </div>
 
-    <div class="links" id="links">
-      <a id="oddil" class="oddil" href="oddil.html">Oddíl</a>
-      <a id="druziny" class="druziny" href="druziny.html">Družiny</a>
-      <a id="akce" class="akce" href="akce.html">Akce</a>
-      <a id="galerie" class="galerie active-tab" href="galerie.html">Galerie</a>
-    </div>
-    
-    <img src="src/icons/more.png" alt="More" class="more" id="openMore">
-    <div class="oddil-menu" id="oddilMenu">
-      <div class="section" id="aboutUs">O nás</div>
-      <div class="section" id="whereAreWe">Kde jsme?</div>
-      <div class="section" id="history">Historie</div>
-    </div>
-    
-    <a class="login" href="account.html">Přihlásit se</a>
+    <links
+      class="w-full relative hidden transition-all text-center opacity-0 text-orange-400 mt-[42px] text-xl line-space-none"
+      id="links">
+      <a id="oddil" class="hover:opacity-70 transition-all" href="oddil.html">Oddíl</a>
+      <img src="../src/icons/more.png" alt="More"
+        class="relative mr-[30px] inline h-[17px] hover:transform hover:rotate-[360deg] cursor-pointer" id="openMore" style="transition: transform 1s, top .2s">
+      <a id="druziny" class="relative mr-[30px] hover:opacity-70 transition-all" href="druziny.html">Družiny</a>
+      <a id="akce" class="relative mr-[30px] hover:opacity-70 transition-all" href="akce.html">Akce</a>
+      <a id="galerie" class="active-tab relative mr-[30px] hover:opacity-70 transition-all" href="galerie.html">Galerie</a>
+    </links>
+
+    <oddilmenu
+      class="hidden w-[125px] z-10 relative text-center justify-center flex-col ml-[29%] mt-2 cursor-pointer transition-all"
+      id="oddilMenu">
+      <div class="bg-oddil-menu transition-all hover:opacity-90 p-1" id="aboutUs">O nás</div>
+      <div class="bg-oddil-menu transition-all hover:opacity-90 p-1" id="whereAreWe">Kde jsme?</div>
+      <div class="bg-oddil-menu transition-all hover:opacity-90 p-1" id="history">Historie</div>
+    </oddilmenu>
+
+    <a class="absolute right-[15px] top-[10px] text-[14px] font-[Skaut-text] underline text-slate-300" href="account.html">Přihlásit se</a>
   </header>
   
   <gallery>
@@ -42,22 +54,8 @@
     </div>
   </gallery>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <div w3-include-html="include/footer.html"></div>
+  
   <script src="src/script/dropdown-reveal.js"></script>
   <script src="src/script/include.js"></script>
   <script src="src/script/cookies.js"></script>
