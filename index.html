@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style/general.css">
   <title>3. Česká Třebová</title>
   <link rel="icon" href="src/icons/oddil-logo.ico">
+  <script src="src/script/header.js"></script>
 
   <link rel="stylesheet" href="output.css">
 </head>
@@ -18,7 +19,7 @@
     </div>
   </div>
 
-  <nav class="select-none top-0 absolute flex flex-row justify-center w-full bg-[#ffffff91] z-10 h-[70px] text-2xl text-[#2f4d36]">
+  <nav class="select-none top-0 fixed flex flex-row justify-center w-full bg-[#ffffff91] z-10 h-[70px] text-2xl text-[#2f4d36]">
     <div>
       <h3 onclick="OpenMenu()" class="mt-4 mr-12 cursor-pointer hover:opacity-80 hover:-translate-y-1 transition-all"
         id="oddil_button">Oddíl</h3>
@@ -26,17 +27,17 @@
         class="transition-all opacity-0 hidden relative mt-[22px] bg-[#ffffff91] pl-3 pr-5 py-3 -ml-4 text-xl rounded-br-[15px] rounded-bl-[15px]"
         id="oddil_menu">
         <ul>
-          <li class="transition-all mb-2 hover:opacity-80 active:scale-105 hover:translate-x-2">
+          <li class="transition-all mb-2 hover:opacity-80 active:scale-105 hover:translate-x-[2px]">
             <a href="pages/oddil.html">
               <h3>O Nás</h3>
             </a>
           </li>
-          <li class="transition-all mb-2 hover:opacity-80 active:scale-105 hover:translate-x-2">
+          <li class="transition-all mb-2 hover:opacity-80 active:scale-105 hover:translate-x-[2px]">
             <a href="pages/kde_jsme.html">
               <h3>Kde Jsme</h3>
             </a>
           </li>
-          <li class="transition-all hover:opacity-80 active:scale-105 hover:translate-x-2">
+          <li class="transition-all hover:opacity-80 active:scale-105 hover:translate-x-[2px]">
             <a href="pages/historie.html">
               <h3>Historie</h3>
             </a>
@@ -71,8 +72,8 @@
       <div
         class="text-white relative bg-transparent transition-all rounded hover:-translate-y-1 hover:bg-oddil-hover mb-7">
         Středisko Javor (domov Františka Navary) se nachází na okraji města Česká Třebová u výpadovky na Litomyšl po
-        levé straně. V současné chvíli ho obývá 7 oddílů. Každému přísluší vlastní klubovna. Středisko je vybaveno i
-        jednou, docela velikou, zasedací místností. Adresa je:
+        levé straně. V současné chvíli ho obývá 7 oddílů. Každému přísluší vlastní klubovna. <br>Středisko je vybaveno i
+        jednou, docela velikou, zasedací místností. <br>Adresa je:
       </div>
       <div class="text-[#f5b016] transition-all rounded hover:-translate-y-1 hover:bg-oddil-hover mb-7">
         3. chlapecký oddíl<br>
@@ -83,21 +84,6 @@
   </div>
 
   <noscript>Povolte JavaScript na vašem prohlížeči pro spuštění stránky</noscript>
-  <script>
-    function OpenMenu() {
-      let oddilButton = document.getElementById('oddil_button');
-      let currentDecoration = oddilButton.style.textDecoration;
-      let oddilMenu = document.getElementById('oddil_menu');
-      let currentState = oddilMenu.style.display;
-      let currentOpacity = oddilMenu.style.opacity;
-
-      oddilButton.style.textDecoration = (currentDecoration === 'underline') ? 'none' : 'underline';
-      oddilMenu.style.display = (currentState === 'block' ? 'none' : 'block');
-      setTimeout(() => {
-        oddilMenu.style.opacity = (currentOpacity === '1' ? '0' : '1');
-      }, 2)
-    }
-  </script>
 </body>
 
 </html>

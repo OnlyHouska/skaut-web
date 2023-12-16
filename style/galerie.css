@@ -1,51 +1,41 @@
-gallery {
-  display: flex;
-  position: absolute;
-  flex-direction: row;
-  justify-content: space-between;
-
-  align-items: center;
-
-  top: 35%;
-  left: 44%;
+* {
+ box-sizing: border-box;
+}
+ 
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
 }
 
-.folder {
-  cursor: pointer;
-  background-color: white;
-  height: 150px;
-  max-width: 250px;
+:root {
+  --magnifier: 1.05;
+  --gap: 1vmin;
+  --transition: 0.5s;
+}
   
-  border: 10px solid;
-  border-image-slice: 1;
-  border-width: 5px;
-  border-image-source: linear-gradient(to left, rgb(247, 194, 28), rgb(244, 158, 0));
-
-  transition: all .2s;
+.container {
+  width: 80vw;
+  height: 20vmin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap);
 }
 
-.cover {
-  position: relative;
-  height: inherit;
-  opacity: 0.7;
-
-  transition: all .2s;
+img {
+  --brightness: 0.75;
+  --grayscale: 1;
+  transition: flex var(--transition), filter var(--transition);
+  height: 100%;
+  filter: grayscale(var(--grayscale)) brightness(var(--brightness));
+  object-fit: cover;
+  overflow: hidden;
+  flex: 1;
 }
 
-.folder:hover .cover {
-  opacity: 1;
-}
-
-.folder:hover .title {
-  transform: translateY(-100px);
-  -webkit-text-stroke: 1.5px white;
-
-}
-
-.title {
-  position: relative;
-  text-align: center;
-  top: 5px;
-  font-size: 20px;
-  transition: all .2s;
+img:hover {
+  --brightness: 1.15;
+  --grayscale: 0;
+  flex: var(--magnifier);
 }
