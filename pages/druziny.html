@@ -21,11 +21,13 @@
 
   <content class="flex justify-center">
     <grid class="relative mt-48 grid auto-cols-fr grid-cols-3 justify-center text-center align-center gap-14">
-      <box class="flex flex-col bg-gradient-to-br from-[#ffffffa6] to-[#ffffff63] rounded-xl w-[300px] h-[370px] mr-5 p-2 border-none drop-shadow-lg">
+      <box
+        class="transtiion-all flex flex-col bg-gradient-to-br from-[#ffffffa6] to-[#ffffff63] rounded-xl w-[300px] h-[370px] mr-5 p-2 border-none drop-shadow-lg"
+        id="racci">
         <h1>Racci</h1>
         <p class="font-[Skaut-text-italic]">"Racci to jsou kamarádi, legraci mají všichni rádi, skauting to je zábava,
           my jsme Trojka Třebová!"</p>
-        <div class="mt-6 rounded-md hover:-translate-y-1 hover:bg-oddil-hover transition-all py-2">
+        <div class=" rounded-md hover:-translate-y-1 hover:bg-oddil-hover transition-all py-2">
           <h2>Schůzky</h2>
           <p class="font-[Skaut-text-bold]">Pátek: <span class="font-[Skaut-text]">16:00 - 17:30</span></p>
         </div>
@@ -34,10 +36,10 @@
           <p class="font-[Skaut-text-bold]">Rádce: <span class="font-[Skaut-text]">Komár <span
                 class="font-[Skaut-text-italic]">(Petr Vomáčka)</span></span></p>
           <p class="font-[Skaut-text-bold]">Podrádce: <span class="font-[Skaut-text]">Konipas <span
-                class="font-[Skaut-text-italic]">(Jakub Tojmar)</span></span></p>
+                class="font-[Skaut-text-italic]">(Jakub Tojmar)</span></span></p><br>
         </div>
         <more class="h-5 flex flex-row justify-center gap-1 cursor-pointer mt-3 hover:-translate-y-0.5 transition-all"
-          onclick="RevealMore(0)">
+          onclick="OpenMore(0)">
           <div class="dot bg-black rounded-full h-2 w-2"></div>
           <div class="dot bg-black rounded-full h-2 w-2"></div>
           <div class="dot bg-black rounded-full h-2 w-2"></div>
@@ -45,7 +47,9 @@
         <img class="absolute h-6 bottom-2 right-2 transition-all active:scale-90 cursor-pointer hover:-translate-y-0.5"
           onclick="CopyInfo(0)" src="../src/icons/copy.png" alt="Zkopírovat informace o družině">
       </box>
-      <box class="flex flex-col bg-gradient-to-br from-[#ffffffa6] to-[#ffffff63] rounded-xl w-[300px] h-[370px] mr-5 p-2 border-none drop-shadow-lg">
+      <box
+        class="flex flex-col bg-gradient-to-br from-[#ffffffa6] to-[#ffffff63] rounded-xl w-[300px] h-[370px] mr-5 p-2 border-none drop-shadow-lg"
+        id="krahujci">
         <h1>Krahujci</h1>
         <p class="font-[Skaut-text-italic]">"Krahujci a krahujčata, hrajeme si kde se dá, my jsme Trojka Třebová!"</p>
         <div class="mt-6 rounded-md hover:-translate-y-1 hover:bg-oddil-hover transition-all py-2">
@@ -62,7 +66,7 @@
                 class="font-[Skaut-text-italic]">(Filip Daniel Gregar)</span></span></p>
         </div>
         <more class="h-5 flex flex-row justify-center gap-1 cursor-pointer mt-3 hover:-translate-y-0.5 transition-all"
-          onclick="RevealMore(1)">
+          onclick="OpenMore(1)">
           <div class="dot bg-black rounded-full h-2 w-2"></div>
           <div class="dot bg-black rounded-full h-2 w-2"></div>
           <div class="dot bg-black rounded-full h-2 w-2"></div>
@@ -70,9 +74,11 @@
         <img class="absolute h-6 bottom-2 right-2 transition-all active:scale-90 cursor-pointer hover:-translate-y-0.5"
           onclick="CopyInfo(1)" src="../src/icons/copy.png" alt="Zkopírovat informace o družině">
       </box>
-      <box class="flex flex-col bg-gradient-to-br from-[#ffffffa6] to-[#ffffff63] rounded-xl w-[300px] h-[370px] mr-5 p-2 border-none drop-shadow-lg">
+      <box
+        class="flex flex-col bg-gradient-to-br from-[#ffffffa6] to-[#ffffff63] rounded-xl w-[300px] h-[370px] mr-5 p-2 border-none drop-shadow-lg"
+        id="ostrizi">
         <h1>Ostříži</h1>
-        <p class="font-[Skaut-text-italic]">"Voda, vzduch, slunce, jas, družina ostřížů zdraví vás!"</p>
+        <p class="font-[Skaut-text-italic]">"Voda, vzduch, slunce, jas, družina Ostřížů zdraví vás!"</p>
         <div class="mt-6 rounded-md hover:-translate-y-1 hover:bg-oddil-hover transition-all py-2">
           <h2>Schůzky</h2>
           <p class="font-[Skaut-text-bold]">Pátek: <span class="font-[Skaut-text]">17:00 - 18:45</span></p>
@@ -87,7 +93,7 @@
                 class="font-[Skaut-text-italic]">(Šimon Urban)</span></span></p>
         </div>
         <more class="h-5 flex flex-row justify-center gap-1 cursor-pointer mt-3 hover:-translate-y-0.5 transition-all"
-          onclick="RevealMore(2)">
+          onclick="OpenMore(2)">
           <div class="dot bg-black rounded-full h-2 w-2"></div>
           <div class="dot bg-black rounded-full h-2 w-2"></div>
           <div class="dot bg-black rounded-full h-2 w-2"></div>
@@ -110,13 +116,27 @@
     function CopyInfo(index) {
       switch (index) {
         case 0:
-          navigator.clipboard.writeText('Jsme družina racků. Máme schůzky každý pátek od 16:00 do 17:30');
+          navigator.clipboard.writeText('Družina: Racci\nČlenové: 10\nSchůzky probíhají každý pátek od 16:00 do 17:30');
           break;
         case 1:
-          navigator.clipboard.writeText('Jsme družina krahujců. Máme schůzky každý pátek od 15:15 do 16:55');
+          navigator.clipboard.writeText('Družina: Krahujci\nČlenové: 11\nSchůzky probíhají každý pátek od 15:15 do 16:55');
           break;
         case 2:
-          navigator.clipboard.writeText('Jsme družina ostřížů. Máme schůzky každý pátek od 17:00 do 18:45');
+          navigator.clipboard.writeText('Družina: Ostříži\nČlenové: 10\nSchůzky probíhají každý pátek od 17:00 do 18:45');
+          break;
+      }
+    }
+
+    function OpenMore(index) {
+      switch (index) {
+        case 0:
+          location.href = 'racci.html';
+          break;
+        case 1:
+          location.href = 'krahujci.html';
+          break;
+        case 2:
+          location.href = 'ostrizi.html';
           break;
       }
     }

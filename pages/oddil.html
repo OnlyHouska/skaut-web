@@ -16,48 +16,7 @@
     <div class="fixed top-0 left-0 w-full h-full bg-gradient-to-br from-[#dec8b1] to-[#be9266]"></div>
   </background>
 
-  <nav class="select-none top-0 fixed flex flex-row justify-center w-full bg-[#ffffff91] z-10 h-[70px] text-2xl text-[#2f4d36]">
-    <div>
-      <h3 onclick="OpenMenu()" class="mt-4 mr-12 cursor-pointer hover:opacity-80 hover:-translate-y-1 transition-all"
-        id="oddil_button">Oddíl</h3>
-      <div
-        class="transition-all opacity-0 hidden relative mt-[22px] bg-[#ffffff91] pl-3 pr-5 py-3 -ml-4 text-xl rounded-br-[15px] rounded-bl-[15px]"
-        id="oddil_menu">
-        <ul>
-          <li class="transition-all mb-2 hover:opacity-80 active:scale-105 hover:translate-x-[2px]">
-            <a href="oddil.html">
-              <h3>O Nás</h3>
-            </a>
-          </li>
-          <li class="transition-all mb-2 hover:opacity-80 active:scale-105 hover:translate-x-[2px]">
-            <a href="kde_jsme.html">
-              <h3>Kde Jsme</h3>
-            </a>
-          </li>
-          <li class="transition-all hover:opacity-80 active:scale-105 hover:translate-x-[2px]">
-            <a href="historie.html">
-              <h3>Historie</h3>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <a href="druziny.html">
-      <h3 class="mt-4 mr-6 cursor-pointer hover:opacity-80 hover:-translate-y-1 transition-all">Družiny</h3>
-    </a>
-    <div
-      class="relative bg-[#ffffff91] mt-[70px] h-24 w-44 rounded-bl-full rounded-br-full flex justify-center align-middle">
-      <a href="https://skaut.cz" target="_blank">
-        <img class="relative h-40 z-10 -mt-[65px] cursor-pointer opacity-100 transition-all hover:transform hover:scale-[1.02]" src="../src/icons/skaut-logo.png" alt="SKAUT LOGO">
-      </a>
-    </div>
-    <a href="akce.html">
-      <h3 class="mt-4 ml-6 cursor-pointer hover:opacity-80 hover:-translate-y-1 transition-all">Akce</h3>
-    </a>
-    <a href="galerie.html">
-      <h3 class="mt-4 ml-12 cursor-pointer hover:opacity-80 hover:-translate-y-1 transition-all">Galerie</h3>
-    </a>
-  </nav>
+  <div w3-include-html="../include/header.html"></div>
 
   <content>
     <div class="text-[18.2px] relative z-[3] justify-center text-center font-[Skaut-text-bold] mx-[80px] mt-[220px] mb-[80px]">

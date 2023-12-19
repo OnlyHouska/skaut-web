@@ -1,58 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style/general.css">
-  <link rel="stylesheet" href="style/header.css">
-  <link rel="stylesheet" href="style/footer.css">
-  <title>3. Česká Třebová - Galerie</title>
-  <link rel="icon" href="src/icons/oddil-logo.ico">
+  <link rel="stylesheet" href="../style/general.css">
+  <title>3. Česká Třebová - Družiny</title>
+  <link rel="icon" href="../src/icons/oddil-logo.ico">
+
+  <link rel="stylesheet" href="../output.css">
 </head>
+
 <body>
-  <img class="background" src="src/background.jpeg" alt="BG IMAGE">
+  <background>
+    <div class="fixed top-0 left-0 w-full h-full bg-gradient-to-br from-[#b1c29b] to-[#7ea263]"></div>
+  </background>
 
-  <header id="header">
-    <img src="src/icons/dropdown.png" alt="Drop Down" class="dropdown-menu" id="dropdown">
-    <img src="src/icons/close.png" alt="Close" class="close-menu" id="close">
-    <img src="src/icons/arrow-left.png" alt="Go Back" class="arrow-left" id="goBack">
+  <div w3-include-html="../include/header.html"></div>
 
-    <div class="links" id="links">
-      <a id="oddil" class="oddil" href="oddil.html">Oddíl</a>
-      <a id="druziny" class="druziny active-tab" href="druziny.html">Družiny</a>
-      <a id="akce" class="akce" href="akce.html">Akce</a>
-      <a id="galerie" class="galerie" href="galerie.html">Galerie</a>
-    </div>
-    
-    <img src="src/icons/more.png" alt="More" class="more" id="openMore">
-    <div class="oddil-menu" id="oddilMenu">
-      <div class="section" id="aboutUs">O nás</div>
-      <div class="section" id="whereAreWe">Kde jsme?</div>
-      <div class="section" id="history">Historie</div>
-    </div>
-    
-    <a class="login" href="account.html">Přihlásit se</a>
-  </header>
-  
-  <div w3-include-html="include/footer.html"></div>
+  <content class="flex justify-center">
+    <box
+      class="w-[800px] relative mt-48 text-center transtiion-all flex flex-col bg-gradient-to-br from-[#ffffffa6] to-[#ffffff63] rounded-xl h-[400px] mr-5 p-2 border-none drop-shadow-lg"
+      id="racci">
+      <h1>Racci</h1>
+      <p class="font-[Skaut-text-italic]">"Racci to jsou kamarádi, legraci mají všichni rádi, skauting to je zábava,
+        my jsme Trojka Třebová!"</p>
+      <div class=" rounded-md hover:-translate-y-1 hover:bg-oddil-hover transition-all py-2">
+        <h2>Schůzky</h2>
+        <p class="font-[Skaut-text-bold]">Pátek: <span class="font-[Skaut-text]">16:00 - 17:30</span></p>
+      </div>
+      <div class="mt-6 rounded-md hover:-translate-y-1 hover:bg-oddil-hover transition-all flex flex-col py-2">
+        <h2>Členové (10)</h2>
+        <p class="font-[Skaut-text-bold]">Rádce: <span class="font-[Skaut-text] hover:underline cursor-pointer">Komár <span
+              class="font-[Skaut-text-italic]">(Petr Vomáčka)</span></p>
+        <p class="font-[Skaut-text-bold]">Podrádce: <span class="font-[Skaut-text] hover:underline cursor-pointer">Konipas <span
+              class="font-[Skaut-text-italic]">(Jakub Tojmar)</span></p>
+      </div>
+      <ul
+        class="mt-1 rounded-md hover:-translate-y-1 hover:bg-oddil-hover transition-all py-2 px-10 text-center">
+        <li class="font-[Skaut-text] inline-block hover:underline cursor-pointer">Čouďák<span class="font-[Skaut-text-italic]"> (Daniel Novotný),</span></li>
+        <li class="font-[Skaut-text] inline-block hover:underline cursor-pointer">Dominik Nastoupil<span class="font-[Skaut-text-italic]">,</span></li>
+        <li class="font-[Skaut-text] inline-block hover:underline cursor-pointer">Filip Svoboda<span class="font-[Skaut-text-italic]">,</span></li>
+        <li class="font-[Skaut-text] inline-block hover:underline cursor-pointer">Raketa<span class="font-[Skaut-text-italic]"> (Filip Novotný),</span></li>
+        <li class="font-[Skaut-text] inline-block hover:underline cursor-pointer">Jakub Nastoupil<span class="font-[Skaut-text-italic]">,</span></li>
+        <li class="font-[Skaut-text] inline-block hover:underline cursor-pointer">Domino<span class="font-[Skaut-text-italic]"> (Lukáš Binko),</span></li>
+        <li class="font-[Skaut-text] inline-block hover:underline cursor-pointer">Děda<span class="font-[Skaut-text-italic]"> (Marek Tojmar),</span></li>
+        <li class="font-[Skaut-text] inline-block hover:underline cursor-pointer">Sonic<span class="font-[Skaut-text-italic]"> (Pavel Musil)</span></li>
+      </ul>
+      <close
+        class="absolute bottom-0 mx-auto w-full h-5 flex flex-row justify-center gap-1 cursor-pointer mb-3 hover:-translate-y-0.5 transition-all"
+        onclick="location.href = 'druziny.html'">
+        <div class="left bg-black rounded-full h-2 w-10 -rotate-45 -mr-11"></div>
+        <div class="right bg-black rounded-full h-2 w-10 rotate-45"></div>
+      </close>
+    </box>
+  </content>
 
+  <div w3-include-html="../include/footer.html"></div>
 
-
-
-
-
-
-
-
-
-
-
-  
-  <script src="src/script/dropdown-reveal.js"></script>
-  <script src="src/script/include.js"></script>
+  <script src="../src/script/include.js"></script>
+  <script src="../src/script/header.js"></script>
   <script>
     includeHTML();
   </script>
   <noscript>Povolte JavaScript na vašem prohlížeči pro spuštění stránky</noscript>
 </body>
+
 </html>
