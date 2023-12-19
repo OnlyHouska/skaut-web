@@ -5,4 +5,5 @@ gallery-item:hover gallery-link {
 gallery-item:hover img {
   filter: blur(2px);
   transform: scale(1.2);
+  transition-duration: 1.5s;
 }
