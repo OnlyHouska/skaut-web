@@ -1,53 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="../output.css">
-  <link rel="stylesheet" href="../style/general.css">
-</head>
-
-<body>
-  <header id="header"
-    class="z-[15] fixed bg-gradient-to-r from-header-1 via-header-2 to-header-3 w-full h-[40px] top-0 transition-all">
-    <img src="../src/icons/dropdown.png" alt="Drop Down"
-      class="inline absolute h-[25px] top-[7px] ml-[48.5%] transition-all cursor-pointer hover:-translate-y-1"
-      id="dropdown">
-    <div class="ml-[48.5%] cursor-pointer">
-      <img src="../src/icons/close.png" alt="Close"
-        class="inline relative h-[25px] top-[-50px] transition-all hover:-translate-y-1" id="close">
-      <img src="../src/icons/arrow-left.png" alt="Go Back"
-        class="inline relative h-[25px] top-[-50px] mr-16 transition-all hover:-translate-x-2" id="goBack">
+<nav
+  class="select-none top-0 fixed flex flex-row justify-center w-full bg-[#ffffff91] z-10 h-[70px] text-2xl text-[#2f4d36]">
+  <div>
+    <h3 onclick="OpenMenu()" class="mt-4 mr-12 cursor-pointer hover:opacity-80 hover:-translate-y-1 transition-all"
+      id="oddil_button">Oddíl</h3>
+    <div
+      class="transition-all opacity-0 hidden relative mt-[22px] bg-[#ffffff91] pl-3 pr-5 py-3 -ml-4 text-xl rounded-br-[15px] rounded-bl-[15px]"
+      id="oddil_menu">
+      <ul>
+        <li class="transition-all mb-2 hover:opacity-80 active:scale-105 hover:translate-x-[2px]">
+          <a href="oddil.html">
+            <h3>O Nás</h3>
+          </a>
+        </li>
+        <li class="transition-all mb-2 hover:opacity-80 active:scale-105 hover:translate-x-[2px]">
+          <a href="kde_jsme.html">
+            <h3>Kde Jsme</h3>
+          </a>
+        </li>
+        <li class="transition-all hover:opacity-80 active:scale-105 hover:translate-x-[2px]">
+          <a href="historie.html">
+            <h3>Historie</h3>
+          </a>
+        </li>
+      </ul>
     </div>
-
-    <links
-      class="w-full relative hidden transition-all text-center opacity-0 text-orange-400 mt-[42px] text-xl line-space-none"
-      id="links">
-      <a id="oddil" class="active-tab hover:opacity-70 transition-all" href="oddil.html">Oddíl</a>
-      <div class="relative mr-[30px] inline h-[17px]">
-        <img src="../src/icons/more.png" alt="More"
-          class="relative mr-[30px] inline h-[17px] hover:transform hover:rotate-[360deg] cursor-pointer" id="openMore"
-          style="transition: transform 1s, top .2s">
-        <oddilmenu
-          class="relative hidden w-[125px] h-6 z-10 text-center justify-center flex-col ml-[32.6%] mt-2 cursor-pointer transition-all"
-          id="oddilMenu">
-          <div class="bg-oddil-menu transition-all hover:opacity-90 p-1" id="aboutUs">O nás</div>
-          <div class="bg-oddil-menu transition-all hover:opacity-90 p-1" id="whereAreWe">Kde jsme?</div>
-          <div class="bg-oddil-menu transition-all hover:opacity-90 p-1" id="history">Historie</div>
-        </oddilmenu>
-      </div>
-      <a id="druziny" class="relative mr-[30px] hover:opacity-70 transition-all" href="druziny.html">Družiny</a>
-      <a id="akce" class="relative mr-[30px] hover:opacity-70 transition-all" href="akce.html">Akce</a>
-      <a id="galerie" class="relative mr-[30px] hover:opacity-70 transition-all" href="galerie.html">Galerie</a>
-    </links>
-
-    <a class="absolute right-[15px] top-[10px] text-[14px] font-[Skaut-text] underline text-slate-300"
-      href="account.html">Přihlásit se</a>
-  </header>
-
-  <script src="../src/script/dropdown-reveal.js"></script>
-</body>
-
-</html>
+  </div>
+  <a href="druziny.html">
+    <h3 class="mt-4 mr-6 cursor-pointer hover:opacity-80 hover:-translate-y-1 transition-all">Družiny</h3>
+  </a>
+  <div
+    class="relative bg-[#ffffff91] mt-[70px] h-24 w-44 rounded-bl-full rounded-br-full flex justify-center align-middle">
+    <a href="https://skaut.cz" target="_blank">
+      <img
+        class="relative h-40 z-10 -mt-[65px] cursor-pointer opacity-100 transition-all hover:transform hover:scale-[1.02]"
+        src="../src/icons/skaut-logo.png" alt="SKAUT LOGO">
+    </a>
+  </div>
+  <a href="akce.html">
+    <h3 class="mt-4 ml-6 cursor-pointer hover:opacity-80 hover:-translate-y-1 transition-all">Akce</h3>
+  </a>
+  <a href="galerie.html">
+    <h3 class="mt-4 ml-12 cursor-pointer hover:opacity-80 hover:-translate-y-1 transition-all">Galerie</h3>
+  </a>
+</nav>

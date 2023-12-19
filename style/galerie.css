@@ -1,3 +1,8 @@
 gallery-item:hover gallery-link {
-  top: 0;
+  opacity: 1;
+}
+
+gallery-item:hover img {
+  filter: blur(2px);
+  transform: scale(1.2);
 }
