@@ -9,5 +9,17 @@ function OpenMenu() {
   oddilMenu.style.display = (currentState === 'block' ? 'none' : 'block');
   setTimeout(() => {
     oddilMenu.style.opacity = (currentOpacity === '1' ? '0' : '1');
-  }, 2)
+  }, 2);
+}
+
+function CloseMenu() {
+  let oddilButton = document.getElementById('oddil_button');
+  let oddilMenu = document.getElementById('oddil_menu');
+
+  document.addEventListener('click', (event) => {
+    if (event.target !== oddilButton && !oddilMenu.contains(event.target)) {
+      oddilButton.style.textDecoration = 'none';
+      oddilMenu.style.display = 'none';
+    }
+  });
 }

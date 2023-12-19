@@ -23,16 +23,17 @@ form label {
 
 .submit {
   position: relative;
+  text-align: center;
   left: 15px;
   width: 140px;
   height: 30px;
   margin-top: 30px;
-  font-family: SKAUT;
+  font-family: Skaut;
+  font-size: 16px;
   
   border-radius: 4px;
   border-width: 3px;
   border-style: solid;
-  background-color: lime;
   
   padding: 5px;
   cursor: pointer;

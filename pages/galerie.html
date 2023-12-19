@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../style/general.css">
+  <link rel="stylesheet" href="../style/galerie.css">
   <title>3. Česká Třebová - Galerie</title>
   <link rel="icon" href="../src/icons/oddil-logo.ico">
 
   <link rel="stylesheet" href="../output.css">
 </head>
+
 <body>
   <background>
     <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#adb0a2] to-[#79846e]"></div>
   </background>
 
-  <nav class="select-none top-0 fixed flex flex-row justify-center w-full bg-[#ffffff91] z-10 h-[70px] text-2xl text-[#2f4d36]">
+  <nav
+    class="select-none top-0 fixed flex flex-row justify-center w-full bg-[#ffffff91] z-10 h-[70px] text-2xl text-[#2f4d36]">
     <div>
       <h3 onclick="OpenMenu()" class="mt-4 mr-12 cursor-pointer hover:opacity-80 hover:-translate-y-1 transition-all"
         id="oddil_button">Oddíl</h3>
@@ -46,7 +50,9 @@
     <div
       class="relative bg-[#ffffff91] mt-[70px] h-24 w-44 rounded-bl-full rounded-br-full flex justify-center align-middle">
       <a href="https://skaut.cz" target="_blank">
-        <img class="relative h-40 z-10 -mt-[65px] cursor-pointer opacity-100 transition-all hover:transform hover:scale-[1.02]" src="../src/icons/skaut-logo.png" alt="SKAUT LOGO">
+        <img
+          class="relative h-40 z-10 -mt-[65px] cursor-pointer opacity-100 transition-all hover:transform hover:scale-[1.02]"
+          src="../src/icons/skaut-logo.png" alt="SKAUT LOGO">
       </a>
     </div>
     <a href="akce.html">
@@ -56,40 +62,63 @@
       <h3 class="mt-4 ml-12 cursor-pointer hover:opacity-80 hover:-translate-y-1 transition-all">Galerie</h3>
     </a>
   </nav>
-  
-  <gallery class="grid grid-cols-3 relative gap-10 text-center content-evenly align-middle m-5 mt-[250px]">
-    <galery-item class="flex relative flex-col">
-      <img class="z-0 h-[220px] w-auto rounded-md blur-[3px] border-black border-solid border-4"src="../src/img/gec568e9b8045b9b1b816676211986b4d752805c3e4f108e112ff9c9259512f3d1da7985d03d3883d5c30e5f7478a9165_640.jpg" alt="Cover IMG">
-      <text class="z-10 relative flex flex-col text-center -top-[140px] text-white">
-        <event class="text-2xl text-stroke-md">Akce</event>
-        <date class="text-stroke-sm">1. 1. 2023</date>
-      </text>
-    </galery-item>
-    <galery-item class="flex relative flex-col">
-      <img class="z-0 h-[220px] w-auto rounded-md blur-[3px] border-black border-solid border-4"src="../src/img/57e9d6414c53ad14f1dc8460962e33791c3ad6e04e507440742a7ed1974dc4_640.jpg" alt="Cover IMG">
-      <text class="z-10 relative flex flex-col text-center -top-[140px] text-white">
-        <event class="text-2xl text-stroke-md">Akce</event>
-        <date class="text-stroke-sm">1. 1. 2023</date>
-      </text>
-    </galery-item>
-    <galery-item class="flex relative flex-col">
-      <img class="z-0 h-[220px] w-auto rounded-md blur-[3px] border-black border-solid border-4"src="../src/img/g51e7f348fca128949da701f15441fa4daf32146fc140d412ad5837635b9bac784b15e7b8427d53209674ad680208d30c_640.jpg" alt="Cover IMG">
-      <text class="z-10 absolute flex flex-col text-center mt-[85px] ml-[160px] text-white">
-        <event class="text-2xl text-stroke-md">Akce</event>
-        <date class="text-stroke-sm">1. 1. 2023</date>
-      </text>
-    </galery-item>
-  </gallery>
 
+  <content class="relative flex flex-col mt-[200px] text-center w-full">
+    <p class="mx-72 relative font-[Skaut-text] text-xl transition-all rounded hover:-translate-y-1 hover:bg-oddil-hover px-5">Výtej v galerii akcí. Budou zde však zobrazeny pouze 3 poslední akce.<br>Pokud máš zájem vidět i
+      ostatní, klikni vedle.</p>
+    <gallery class="grid grid-cols-3 relative gap-[2em] text-center content-evenly align-middle m-5">
+      <gallery-item class="flex relative flex-col h-[220px] w">
+        <img class="h-[inherit] w-auto rounded-md blur-[3px] border-black border-solid border-4 transition-all duration-300 z-10"
+          src="../src/img/gec568e9b8045b9b1b816676211986b4d752805c3e4f108e112ff9c9259512f3d1da7985d03d3883d5c30e5f7478a9165_640.jpg"
+          alt="Cover IMG">
+        <text class="z-10 absolute flex flex-col justify-center items-center text-white w-full h-[inherit]">
+          <event class="text-2xl text-stroke-md">Akce</event>
+          <date class="text-stroke-sm">1. 1. 2023</date>
+        </text>
+        <gallery-link onclick="openGallery(this.id)" id="firstLink" class="flex flex-row relative -top-20 z-0 w-fit transition-all cursor-pointer">
+          <img src="../src/icons/link.png" alt="Otevřít galerii" class="h-10 w-10 border-solid border-2 rounded-md border-black p-1 bg-[#f5b016]">
+          <p class="font-[Skaut-text] text-lg ml-3 mt-1.5 w-fit underline">Otevřít galerii</p>
+        </gallery-link>
+      </gallery-item>
+      <gallery-item class="flex relative flex-col h-[220px] w">
+        <img class="h-[inherit] w-auto rounded-md blur-[3px] border-black border-solid border-4 transition-all duration-300 z-10"
+          src="../src/img/57e9d6414c53ad14f1dc8460962e33791c3ad6e04e507440742a7ed1974dc4_640.jpg"
+          alt="Cover IMG">
+        <text class="z-10 absolute flex flex-col justify-center items-center text-white w-full h-[inherit]">
+          <event class="text-2xl text-stroke-md">Akce</event>
+          <date class="text-stroke-sm">1. 1. 2023</date>
+        </text>
+        <gallery-link onclick="openGallery(this.id)" id="secondLink" class="flex flex-row relative -top-20 z-0 w-fit transition-all cursor-pointer">
+          <img src="../src/icons/link.png" alt="Otevřít galerii" class="h-10 w-10 border-solid border-2 rounded-md border-black p-1 bg-[#f5b016]">
+          <p class="font-[Skaut-text] text-lg ml-3 mt-1.5 w-fit underline">Otevřít galerii</p>
+        </gallery-link>
+      </gallery-item>
+      <gallery-item class="flex relative flex-col h-[220px] w">
+        <img class="h-[inherit] w-auto rounded-md blur-[3px] border-black border-solid border-4 transition-all duration-300 z-10"
+          src="../src/img/g51e7f348fca128949da701f15441fa4daf32146fc140d412ad5837635b9bac784b15e7b8427d53209674ad680208d30c_640.jpg"
+          alt="Cover IMG">
+        <text class="z-10 absolute flex flex-col justify-center items-center text-white w-full h-[inherit]">
+          <event class="text-2xl text-stroke-md">Akce</event>
+          <date class="text-stroke-sm">1. 1. 2023</date>
+        </text>
+        <gallery-link onclick="openGallery(this.id)" id="thirdLink" class="flex flex-row relative -top-20 z-0 w-fit transition-all cursor-pointer">
+          <img src="../src/icons/link.png" alt="Otevřít galerii" class="h-10 w-10 border-solid border-2 rounded-md border-black p-1 bg-[#f5b016]">
+          <p class="font-[Skaut-text] text-lg ml-3 mt-1.5 w-fit underline">Otevřít galerii</p>
+        </gallery-link>
+      </gallery-item>
+    </gallery>
+  </content>
   <div w3-include-html="../include/footer.html"></div>
-  
+
   <script src="../src/script/include.js"></script>
   <script src="../src/script/cookies.js"></script>
   <script src="../src/script/header.js"></script>
+  <script src="../src/script/gallery.js"></script>
 
   <script>
     includeHTML();
   </script>
   <noscript>Povolte JavaScript na vašem prohlížeči pro spuštění stránky</noscript>
 </body>
+
 </html>

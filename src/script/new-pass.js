@@ -65,13 +65,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var logIn = document.createElement('a');
     logIn.textContent = 'Přihlásit se';
-    logIn.href = '../../account.html';
+    logIn.href = '../../pages/account.html';
     alertTitleDiv.appendChild(logIn);
     
 
     var alertCloseImg = document.createElement('img');
     alertCloseImg.className = 'alert-close';
-    alertCloseImg.src = 'src/icons/close.png';
+    alertCloseImg.src = '../src/icons/close.png';
     alertCloseImg.id = 'alertClose';
     alertCloseImg.onclick = AlertClose;
 
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var alertCloseImg = document.createElement('img');
     alertCloseImg.className = 'alert-close';
-    alertCloseImg.src = 'src/icons/close.png';
+    alertCloseImg.src = '../src/icons/close.png';
     alertCloseImg.id = 'alertClose';
     alertCloseImg.onclick = AlertClose;
 
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var alertCloseImg = document.createElement('img');
     alertCloseImg.className = 'alert-close';
-    alertCloseImg.src = 'src/icons/close.png';
+    alertCloseImg.src = '../src/icons/close.png';
     alertCloseImg.id = 'alertClose';
     alertCloseImg.onclick = AlertClose;
 
