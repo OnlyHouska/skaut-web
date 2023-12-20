@@ -1,7 +1,10 @@
 const cm = document.getElementById('custom-cm')
 let menuState = 0;
 var contextMenuActive = "block";
-const memberCardButton = document.getElementById('memberCardButton');
+let memberCardButton = null;
+if  (document.getElementById('memberCardButton')) {
+  memberCardButton = document.getElementById('memberCardButton')
+};
 
 function toggleMenuOn() {
   if (menuState !== 1) {
