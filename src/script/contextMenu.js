@@ -18,15 +18,18 @@ function toggleMenuOff() {
 }
 
 document.addEventListener("contextmenu", function (event) {
-  if (checkForMember(event)) {
-    memberCardButton.style.color = 'black';
-    memberCardButton.classList.add('hover:bg-gray-300');
-    memberCardButton.style.pointerEvents = 'all';
-  }
-  else {
-    memberCardButton.style.color = 'rgb(156 163 175)';
-    memberCardButton.classList.remove('hover:bg-gray-300');
-    memberCardButton.style.pointerEvents = 'none';
+  if (memberCardButton) {
+
+    if (checkForMember(event)) {
+      memberCardButton.style.color = 'black';
+      memberCardButton.classList.add('hover:bg-gray-300');
+      memberCardButton.style.pointerEvents = 'all';
+    }
+    else {
+      memberCardButton.style.color = 'rgb(156 163 175)';
+      memberCardButton.classList.remove('hover:bg-gray-300');
+      memberCardButton.style.pointerEvents = 'none';
+    }
   }
 
   event.preventDefault();
