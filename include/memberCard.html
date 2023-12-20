@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="../output.css">
+  <link rel="stylesheet" href="../style/general.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+</head>
+
+<body>
+  <div class="fixed h-full w-full bg-lime-300"></div>
+
+  <member-card class="flex justify-center items-center">
+    <box
+      class="flex flex-col bg-gradient-to-br from-[#ffffffa6] to-[#ffffff63] rounded-xl w-[300px] h-[370px] mr-5 p-2 border-none drop-shadow-lg">
+      <h1>Karta skauta</h1>
+      <div class="mt-6 rounded-md hover:-translate-y-1 hover:bg-oddil-hover transition-all py-2 px-1:() font-[Skaut-text]">
+        <p><strong>Jméno: </strong><span id="name"></span></p>
+        <p><strong>Přezdívka: </strong><span id="nickname"></span></p>
+        <p><strong>Věk: </strong><span id="age"></span></p>
+        <p>Členem od roku <em><span id="memberFromYear"></span></em></p>
+      </div>
+      <div class="mt-1 rounded-md hover:-translate-y-1 hover:bg-oddil-hover transition-all py-2 font-[Skaut-text]">
+        <p><strong>Družina: </strong><span id="unit"></span></p>
+        <p><strong>Postavení ve družině: </strong><span id="rank"></span></p>
+      </div>
+      <h2 class="mt-6">Koníčky</h2>
+      <ul class="ml-2 rounded-md hover:-translate-y-1 hover:bg-oddil-hover transition-all pb-2 pt-1 px-2 font-[Skaut-text] list-disc">
+        <li>IT</li>
+        <li>Hudba</li>
+      </ul>
+
+      <close
+        class="absolute bottom-0 mx-auto w-full h-5 flex flex-row justify-center gap-1 cursor-pointer mb-3 hover:-translate-y-0.5 transition-all"
+        onclick="closeMemberCard()">
+        <div class="left bg-black rounded-full h-2 w-10 -rotate-45 -mr-11"></div>
+        <div class="right bg-black rounded-full h-2 w-10 rotate-45"></div>
+      </close>
+      <img class="absolute h-6 bottom-2 right-2 transition-all active:scale-90 cursor-pointer hover:-translate-y-0.5" src="../src/icons/edit.png" alt="Upravit kartu">
+    </box>
+  </member-card>
+
+  <script src="../src/script/memberCard.js"></script>
+</body>
+
+</html>

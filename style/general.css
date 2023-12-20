@@ -37,6 +37,15 @@ a {
   color: white;
 }
 
+context-menu {
+  display: none;
+  width: 200px !important;
+}
+
+context-menu :first-child::before {
+  content: '★ ';
+}
+
 .background {
   z-index: 0;
   position: fixed;

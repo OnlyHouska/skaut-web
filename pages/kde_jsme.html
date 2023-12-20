@@ -20,6 +20,16 @@
 </head>
 
 <body>
+  <context-menu class="transition-opacity font-[Skaut-text] bg-white border-solid border-gray-500 drop-shadow-lg py-3 w-40 absolute top-0 left-0 px-3"
+    id="custom-cm" style="z-index: 100;">
+    <div class="pl-1">Rychlé akce</div>
+    <div class="my-2 border-b-2 border-gray-200"></div>
+    <a class="block py-1 cursor-pointer transition-all hover:bg-gray-300 rounded-sm pl-1" href="https://javorct.app.levitio.com">Přihlásit se</a>
+    <a class="block py-1 cursor-pointer transition-all hover:bg-gray-300 rounded-sm pl-1" href="akce.html">Kalendář akcí</a>
+    <a class="block py-1 cursor-pointer transition-all hover:bg-gray-300 rounded-sm pl-1" href="galerie.html">Galerie</a>
+  </context-menu>
+  <script src="../src/script/contextMenu.js"></script>
+
   <background>
     <div class="fixed top-0 left-0 w-full h-full bg-gradient-to-br from-[#dec8b1] to-[#be9266] -z-10"></div>
   </background>
@@ -40,12 +50,13 @@
         3. chlapecký oddíl<br>
         Farská 113<br>
         560 02 Česká Třebová
-        <img src="../src/icons/copy.png" alt="Zkopírovat adresu" class="opacity-0 none h-6 mx-auto my-2 transition-all active:scale-90 cursor-pointer hover:-translate-y-0.5" onclick="CopyAddress()">
+        <img src="../src/icons/copy.png" alt="Zkopírovat adresu"
+          class="opacity-0 none h-6 mx-auto my-2 transition-all active:scale-90 cursor-pointer hover:-translate-y-0.5"
+          onclick="CopyAddress()">
       </address>
     </text>
     <div class="flex justify-center items-center mb-20">
-      <map
-        class="w-[600px] h-[450px] relative border-solid border-4 border-black rounded-md">
+      <map class="w-[600px] h-[450px] relative border-solid border-4 border-black rounded-md">
         <iframe class="absolute z-10 top-0 left-0 w-full h-full"
           src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2569.902670632898!2d16.428211412000753!3d49.90063057137357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDnCsDU0JzAyLjMiTiAxNsKwMjUnNTAuOSJF!5e0!3m2!1scs!2scz!4v1690017127809!5m2!1scs!2scz"
           allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="600px"

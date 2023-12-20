@@ -13,6 +13,19 @@
 </head>
 
 <body>
+  <context-menu
+    class="transition-opacity font-[Skaut-text] bg-white border-solid border-gray-500 drop-shadow-lg py-3 w-40 absolute top-0 left-0 px-3"
+    id="custom-cm" style="z-index: 100;">
+    <div class="pl-1">Rychlé akce</div>
+    <div class="my-2 border-b-2 border-gray-200"></div>
+    <a class="block py-1 cursor-pointer transition-all hover:bg-gray-300 rounded-sm pl-1"
+      href="https://javorct.app.levitio.com">Přihlásit se</a>
+    <a class="block py-1 cursor-pointer transition-all hover:bg-gray-300 rounded-sm pl-1" href="akce.html">Kalendář
+      akcí</a>
+    <a class="block py-1 cursor-pointer transition-all hover:bg-gray-300 rounded-sm pl-1"
+      href="galerie.html">Galerie</a>
+  </context-menu>
+  <script src="../src/script/contextMenu.js"></script>
   <background>
     <div class="fixed top-0 left-0 w-full h-full bg-gradient-to-br from-[#b1c29b] to-[#7ea263]"></div>
   </background>
