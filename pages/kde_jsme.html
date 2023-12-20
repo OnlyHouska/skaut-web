@@ -10,79 +10,64 @@
   <link rel="icon" href="../src/icons/oddil-logo.ico">
 
   <link rel="stylesheet" href="../output.css">
+
+  <style>
+    address:hover img {
+      display: block;
+      opacity: 1;
+    }
+  </style>
 </head>
 
 <body>
   <background>
-    <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#dec8b1] to-[#be9266]"></div>
+    <div class="fixed top-0 left-0 w-full h-full bg-gradient-to-br from-[#dec8b1] to-[#be9266] -z-10"></div>
   </background>
 
-  <nav class="select-none top-0 fixed flex flex-row justify-center w-full bg-[#ffffff91] z-10 h-[70px] text-2xl text-[#2f4d36]">
-    <div>
-      <h3 onclick="OpenMenu()" class="mt-4 mr-12 cursor-pointer hover:opacity-80 hover:-translate-y-1 transition-all"
-        id="oddil_button">Oddíl</h3>
-      <div
-        class="transition-all opacity-0 hidden relative mt-[22px] bg-[#ffffff91] pl-3 pr-5 py-3 -ml-4 text-xl rounded-br-[15px] rounded-bl-[15px]"
-        id="oddil_menu">
-        <ul>
-          <li class="transition-all mb-2 hover:opacity-80 active:scale-105 hover:translate-x-[2px]">
-            <a href="oddil.html">
-              <h3>O Nás</h3>
-            </a>
-          </li>
-          <li class="transition-all mb-2 hover:opacity-80 active:scale-105 hover:translate-x-[2px]">
-            <a href="kde_jsme.html">
-              <h3>Kde Jsme</h3>
-            </a>
-          </li>
-          <li class="transition-all hover:opacity-80 active:scale-105 hover:translate-x-[2px]">
-            <a href="historie.html">
-              <h3>Historie</h3>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <a href="druziny.html">
-      <h3 class="mt-4 mr-6 cursor-pointer hover:opacity-80 hover:-translate-y-1 transition-all">Družiny</h3>
-    </a>
-    <div
-      class="relative bg-[#ffffff91] mt-[70px] h-24 w-44 rounded-bl-full rounded-br-full flex justify-center align-middle">
-      <a href="https://skaut.cz" target="_blank">
-        <img class="relative h-40 z-10 -mt-[65px] cursor-pointer opacity-100 transition-all hover:transform hover:scale-[1.02]" src="../src/icons/skaut-logo.png" alt="SKAUT LOGO">
-      </a>
-    </div>
-    <a href="akce.html">
-      <h3 class="mt-4 ml-6 cursor-pointer hover:opacity-80 hover:-translate-y-1 transition-all">Akce</h3>
-    </a>
-    <a href="galerie.html">
-      <h3 class="mt-4 ml-12 cursor-pointer hover:opacity-80 hover:-translate-y-1 transition-all">Galerie</h3>
-    </a>
-  </nav>
+  <div w3-include-html="../include/header.html"></div>
 
-  <div class="container">
-    <div class="kde-jsme">
-      <div>Středisko Javor (domov Františka Navary) se nachází na okraji města Česká Třebová u výpadovky na Litomyšl po
+  <content>
+    <text class="flex flex-col justify-center text-center mt-52 font-[Skaut-text] w-[800px] m-auto mb-10">
+      <div class="transition-all rounded hover:-translate-y-1 hover:bg-oddil-hover">
+        Středisko Javor (domov Františka Navary) se nachází na okraji města Česká Třebová u výpadovky na Litomyšl po
         levé straně. V současné chvíli ho obývá 7 oddílů. Každému přísluší vlastní klubovna. Středisko je vybaveno i
-        jednou, docela velikou, zasedací místností. Adresa je:</div>
-      <br><br>
-      <div class="adresa">Skautské středisko Javor<br>
+        jednou, docela velikou, zasedací místností.<br>
+        <span class="font-[Skaut-text-bold]"><br>Adresa je:</span>
+      </div>
+      <br>
+      <address class="font-[Skaut-text-bold] transition-all rounded hover:-translate-y-1 hover:bg-oddil-hover">
+        Skautské středisko Javor<br>
         3. chlapecký oddíl<br>
         Farská 113<br>
         560 02 Česká Třebová
-      </div>
-      <iframe class="relative"
-        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2569.902670632898!2d16.428211412000753!3d49.90063057137357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDnCsDU0JzAyLjMiTiAxNsKwMjUnNTAuOSJF!5e0!3m2!1scs!2scz!4v1690017127809!5m2!1scs!2scz"
-        width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <img src="../src/icons/copy.png" alt="Zkopírovat adresu" class="opacity-0 none h-6 mx-auto my-2 transition-all active:scale-90 cursor-pointer hover:-translate-y-0.5" onclick="CopyAddress()">
+      </address>
+    </text>
+    <div class="flex justify-center items-center mb-20">
+      <map
+        class="w-[600px] h-[450px] relative border-solid border-4 border-black rounded-md">
+        <iframe class="absolute z-10 top-0 left-0 w-full h-full"
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2569.902670632898!2d16.428211412000753!3d49.90063057137357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDnCsDU0JzAyLjMiTiAxNsKwMjUnNTAuOSJF!5e0!3m2!1scs!2scz!4v1690017127809!5m2!1scs!2scz"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="600px"
+          height="450px"></iframe>
+        <div class="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] z-0">
+          <img src="../src/icons/loading_animation.svg" class="h-52 !blur-0 !scale-100">
+        </div>
+      </map>
     </div>
-  </div>
+  </content>
 
 
-  <div w3-include-html="include/footer.html"></div>
+  <div w3-include-html="../include/footer.html"></div>
   <script src="../src/script/include.js"></script>
   <script src="../src/script/header.js"></script>
   <script>
     includeHTML();
+  </script>
+  <script>
+    function CopyAddress() {
+      navigator.clipboard.writeText('Skautské středisko Javor\n3. chlapecký oddíl\nFarská 113\n560 02 Česká Třebová');
+    }
   </script>
   <noscript>Povolte JavaScript na vašem prohlížeči pro spuštění stránky</noscript>
 </body>
