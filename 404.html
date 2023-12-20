@@ -1,1 +1,97 @@
-:(
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Error 404</title>
+  <link rel="stylesheet" href="style/general.css">
+  <link rel="stylesheet" href="output.css">
+</head>
+<body>
+  <context-menu
+    class="transition-opacity font-[Skaut-text] bg-white border-solid border-gray-500 drop-shadow-lg py-3 w-40 absolute top-0 left-0 px-3"
+    id="custom-cm" style="z-index: 100;">
+    <div class="pl-1">Rychlé akce</div>
+    <div class="my-2 border-b-2 border-gray-200"></div>
+    <a class="block py-1 cursor-pointer transition-all hover:bg-gray-300 rounded-sm pl-1"
+      href="https://javorct.app.levitio.com">Přihlásit se</a>
+    <a class="block py-1 cursor-pointer transition-all hover:bg-gray-300 rounded-sm pl-1" href="pages/akce.html">Kalendář
+      akcí</a>
+    <a class="block py-1 cursor-pointer transition-all hover:bg-gray-300 rounded-sm pl-1"
+      href="pages/galerie.html">Galerie</a>
+  </context-menu>
+  <script src="src/script/contextMenu.js"></script>
+
+  <div class="fixed w-full h-full bg-gradient-to-br from-red-300 to-red-200 -z-10"></div>
+  
+  <nav
+    class="select-none top-0 fixed flex flex-row justify-center w-full bg-[#ffffffa6] z-50 h-[70px] text-2xl text-[#2f4d36]">
+    <div>
+      <h3 onclick="OpenMenu()"
+        class="-ml-12 mt-4 mr-12 cursor-pointer hover:opacity-80 hover:-translate-y-1 transition-all" id="oddil_button">
+        Oddíl</h3>
+      <div
+        class="transition-all opacity-0 hidden relative mt-[22px] bg-[#ffffffa6] pl-3 pr-5 py-3 -ml-14 text-xl rounded-br-[15px] rounded-bl-[15px]"
+        id="oddil_menu">
+        <ul>
+          <li class="transition-all mb-2 hover:opacity-80 active:scale-105 hover:translate-x-[2px]">
+            <a href="pages/oddil.html">
+              <h3>O Nás</h3>
+            </a>
+          </li>
+          <li class="transition-all mb-2 hover:opacity-80 active:scale-105 hover:translate-x-[2px]">
+            <a href="pages/kde_jsme.html">
+              <h3>Kde Jsme</h3>
+            </a>
+          </li>
+          <li class="transition-all hover:opacity-80 active:scale-105 hover:translate-x-[2px]">
+            <a href="pages/historie.html">
+              <h3>Historie</h3>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <a href="pages/druziny.html">
+      <h3 class="mt-4 mr-6 cursor-pointer hover:opacity-80 hover:-translate-y-1 transition-all">Družiny</h3>
+    </a>
+    <div
+      class="relative bg-[#ffffffa6] mt-[70px] h-24 w-44 rounded-bl-full rounded-br-full flex justify-center align-middle">
+      <a href="https://skaut.cz" target="_blank">
+        <img
+          class="relative h-40 z-10 -mt-[65px] cursor-pointer opacity-100 transition-all hover:transform hover:scale-[1.02]"
+          src="src/icons/skaut-logo.png" alt="SKAUT LOGO">
+      </a>
+    </div>
+    <a href="pages/galerie.html">
+      <h3 class="mt-4 ml-6 cursor-pointer hover:opacity-80 hover:-translate-y-1 transition-all">Galerie</h3>
+    </a>
+    <a href="pages/akce.html">
+      <h3 class="mt-4 ml-12 cursor-pointer hover:opacity-80 hover:-translate-y-1 transition-all">Akce</h3>
+    </a>
+  </nav>
+  
+  <content class="flex h-full justify-center font-[Skaut-text] text-center">
+    <error class="mt-64 flex flex-col justify-center">
+      <div class="flex flex-row ml-9">
+        <img src="src/icons/magnifying-glass.png" class="h-28 mt-4 mr-8">
+        <h1 class="text-9xl font-bold">Ups...</h1>
+      </div>
+      <p class="mt-10 text-xl">Vypadá to že tahle stránka neexistuje. Nemáš někde chybu?</p>
+    </error>
+  </content>
+
+
+  <footer class="z-10 fixed bottom-0 w-full h-[40px] bg-gradient-to-r from-black to-[#1f1f1f] trasnition-all font-[Skaut-text-bold] mt-[100px] left-0">
+    <p class="absolute text-white text-[13px] bottom-0 right-0 my-[10px] mr-1">&#169; 2024</p>
+    <div class="text-center relative text-[17px] text-white top-[5px]">
+      <a class="ml-[15px] transition-all p-[5px] hover:opacity-90 hover:bg-[#000000ab]" href="https://krizovatka.skaut.cz" target="_blank">Skautská Křižovatka</a>
+      <a class="ml-[15px] transition-all p-[5px] hover:opacity-90 hover:bg-[#000000ab]" href="https://skaut.cz" target="_blank">Skaut</a>
+      <a class="ml-[15px] transition-all p-[5px] hover:opacity-90 hover:bg-[#000000ab]" href="https://javorct.cz" target="_blank">Středisko Javor</a>
+      <a class="ml-[15px] transition-all p-[5px] hover:opacity-90 hover:bg-[#000000ab]" href="https://javorct.app.levitio.com/">Přihlásit se</a>
+    </div>
+    <img src="../src/icons/pardubicky-kraj-logo.png" alt="Pardubický kraj" class="absolute top-0 h-[40px]">
+  </footer>
+  <script src="src/script/header.js"></script>
+</body>
+</html>
