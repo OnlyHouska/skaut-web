@@ -12,14 +12,15 @@ function OpenMenu() {
   }, 2);
 }
 
-function CloseMenu() {
-  let oddilButton = document.getElementById('oddil_button');
-  let oddilMenu = document.getElementById('oddil_menu');
+function handleScroll() {
+  let nav = document.getElementById('header')
+  var scrollPosition = window.scrollY;
 
-  document.addEventListener('click', (event) => {
-    if (event.target !== oddilButton && !oddilMenu.contains(event.target)) {
-      oddilButton.style.textDecoration = 'none';
-      oddilMenu.style.display = 'none';
-    }
-  });
+  var maxScroll = 50;
+  if (scrollPosition > maxScroll) {
+    nav.style.top = '-100px';
+  }
+  else
+    nav.style.top = '0';
 }
+window.addEventListener('scroll', handleScroll);
