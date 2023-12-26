@@ -24,7 +24,8 @@
     <a class="block py-1 cursor-pointer transition-all hover:bg-gray-300 rounded-sm pl-1"
       href="galerie.html">Galerie</a>
     <div class="my-2 border-b-2 border-gray-200"></div>
-    <div class="block py-1 cursor-pointer transition-all rounded-sm pl-1 text-gray-400" id="memberCardButton" onclick="openMemberCard()">Zobrazit kartu člena</div>
+    <div class="block py-1 cursor-pointer transition-all rounded-sm pl-1 text-gray-400" id="memberCardButton"
+      onclick="openMemberCard()">Zobrazit kartu člena</div>
   </context-menu>
   <script src="../src/script/contextMenu.js"></script>
 
@@ -47,23 +48,23 @@
       </div>
       <div class="mt-6 rounded-md hover:-translate-y-1 hover:bg-oddil-hover transition-all flex flex-col py-2">
         <h2>Členové (10)</h2>
-        <p class="font-[Skaut-text-bold]">Rádce: <span class="font-[Skaut-text] hover:underline cursor-pointer" id="member" memberId="01">Komár
+        <p class="font-[Skaut-text-bold]">Rádce: <span class="font-[Skaut-text] hover:underline cursor-pointer"
+            id="member" memberId="01">Komár
             <span class="font-[Skaut-text-italic]">(Petr Vomáčka)</span></p>
-        <p class="font-[Skaut-text-bold]">Podrádce: <span
-            class="font-[Skaut-text] hover:underline cursor-pointer" id="member" memberId="02">Konipas <span
-              class="font-[Skaut-text-italic]">(Jakub Tojmar)</span></p>
+        <p class="font-[Skaut-text-bold]">Podrádce: <span class="font-[Skaut-text] hover:underline cursor-pointer"
+            id="member" memberId="02">Konipas <span class="font-[Skaut-text-italic]">(Jakub Tojmar)</span></p>
       </div>
       <ul class="mt-1 rounded-md hover:-translate-y-1 hover:bg-oddil-hover transition-all py-2 px-10 text-center">
         <li class="font-[Skaut-text] inline-block hover:underline cursor-pointer" id="member" memberId="03">Čouďák<span
             class="font-[Skaut-text-italic]"> (Daniel Novotný),</span></li>
-        <li class="font-[Skaut-text] inline-block hover:underline cursor-pointer" id="member" memberId="04">Dominik Nastoupil<span
-            class="font-[Skaut-text-italic]">,</span></li>
-        <li class="font-[Skaut-text] inline-block hover:underline cursor-pointer" id="member" memberId="05">Filip Svoboda<span
-            class="font-[Skaut-text-italic]">,</span></li>
+        <li class="font-[Skaut-text] inline-block hover:underline cursor-pointer" id="member" memberId="04">Dominik
+          Nastoupil<span class="font-[Skaut-text-italic]">,</span></li>
+        <li class="font-[Skaut-text] inline-block hover:underline cursor-pointer" id="member" memberId="05">Filip
+          Svoboda<span class="font-[Skaut-text-italic]">,</span></li>
         <li class="font-[Skaut-text] inline-block hover:underline cursor-pointer" id="member" memberId="06">Raketa<span
             class="font-[Skaut-text-italic]"> (Filip Novotný),</span></li>
-        <li class="font-[Skaut-text] inline-block hover:underline cursor-pointer" id="member" memberId="07">Jakub Nastoupil<span
-            class="font-[Skaut-text-italic]">,</span></li>
+        <li class="font-[Skaut-text] inline-block hover:underline cursor-pointer" id="member" memberId="07">Jakub
+          Nastoupil<span class="font-[Skaut-text-italic]">,</span></li>
         <li class="font-[Skaut-text] inline-block hover:underline cursor-pointer" id="member" memberId="08">Domino<span
             class="font-[Skaut-text-italic]"> (Lukáš Binko),</span></li>
         <li class="font-[Skaut-text] inline-block hover:underline cursor-pointer" id="member" memberId="09">Děda<span
@@ -72,8 +73,8 @@
             class="font-[Skaut-text-italic]"> (Pavel Musil)</span></li>
       </ul>
       <close
-        class="absolute bottom-0 mx-auto w-full h-5 flex flex-row justify-center gap-1 cursor-pointer mb-3 hover:-translate-y-0.5 transition-all"
-        onclick="location.href = 'druziny.html'">
+        class="relative mx-auto mt-4 w-full h-5 flex flex-row justify-center gap-1 cursor-pointer mb-3 hover:-translate-y-0.5 transition-all"
+        onclick="location.href = 'druziny.html'" title="Zavřít">
         <div class="left bg-black rounded-full h-2 w-10 -rotate-45 -mr-11"></div>
         <div class="right bg-black rounded-full h-2 w-10 rotate-45"></div>
       </close>
