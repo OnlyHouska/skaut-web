@@ -6,11 +6,12 @@ module.exports = {
     './pages/**/*.{html,js}',
     './components/**/*.{html,js}',
   ],
-  safelist: [
-    {
-      pattern: /./,
-    },
-  ],
+  // safelist: [
+  //   {
+  //     pattern: /./,
+  //     variants: ['sm', 'md', 'lg']
+  //   },
+  // ],
   theme: {
     extend: {
       colors: {

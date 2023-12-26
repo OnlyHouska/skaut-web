@@ -27,20 +27,16 @@
   </context-menu>
   <script src="src/script/contextMenu.js"></script>
 
-  <div class="m-auto align-middle relative">
-    <div class="background z-0" id="background">
-      <img src="src/background.jpeg" alt="BG IMAGE">
-    </div>
+  <div class="fixed top-0 left-0 w-full h-full object-cover bg-cover bg-center" style="background-image: url('src/background.jpeg')">
   </div>
 
   <nav
-    class="select-none top-0 fixed flex flex-row justify-center w-full bg-[#ffffffa6] z-50 h-[70px] text-2xl text-[#2f4d36]">
+  class="top-0 fixed flex flex-row justify-center w-full bg-[#ffffffa6] z-50 text-[#2f4d36] h-[60px] sm:h-[65px] md:h-[70px] text-base space-x-5 md:text-2xl md:space-x-8 sm:text-lg">
     <div>
-      <h3 onclick="OpenMenu()"
-        class="-ml-12 mt-4 mr-12 cursor-pointer hover:opacity-80 hover:-translate-y-1 transition-all" id="oddil_button">
-        Oddíl</h3>
+      <h3 onclick="OpenMenu()" class="ml-4 mt-4 cursor-pointer hover:opacity-80 hover:-translate-y-1 transition-all md:ml-0"
+        id="oddil_button">Oddíl</h3>
       <div
-        class="transition-all opacity-0 hidden relative mt-[22px] bg-[#ffffffa6] pl-3 pr-5 py-3 -ml-14 text-xl rounded-br-[15px] rounded-bl-[15px]"
+        class="w-28 transition-all opacity-0 hidden relative bg-[#ffffffa6] pl-3 pr-5 md:py-3 py-2 text-base rounded-br-[15px] mt-[20px] rounded-bl-[15px] md:mt-[22px] md:text-2xl md:-ml-[14px] md:w-44"
         id="oddil_menu">
         <ul>
           <li class="transition-all mb-2 hover:opacity-80 active:scale-105 hover:translate-x-[2px]">
@@ -62,10 +58,10 @@
       </div>
     </div>
     <a href="pages/druziny.html">
-      <h3 class="mt-4 mr-6 cursor-pointer hover:opacity-80 hover:-translate-y-1 transition-all">Družiny</h3>
+      <h3 class="mt-4 cursor-pointer hover:opacity-80 hover:-translate-y-1 transition-all">Družiny</h3>
     </a>
     <div
-      class="relative bg-[#ffffffa6] mt-[70px] h-24 w-44 rounded-bl-full rounded-br-full flex justify-center align-middle">
+      class="hidden relative bg-[#ffffffa6] mt-[70px] h-24 w-44 rounded-bl-full rounded-br-full justify-center align-middle md:flex">
       <a href="https://skaut.cz" target="_blank">
         <img
           class="relative h-40 z-10 -mt-[65px] cursor-pointer opacity-100 transition-all hover:transform hover:scale-[1.02]"
@@ -73,21 +69,21 @@
       </a>
     </div>
     <a href="pages/galerie.html">
-      <h3 class="mt-4 ml-6 cursor-pointer hover:opacity-80 hover:-translate-y-1 transition-all">Galerie</h3>
+      <h3 class="mt-4 cursor-pointer hover:opacity-80 hover:-translate-y-1 transition-all">Galerie</h3>
     </a>
     <a href="pages/akce.html">
-      <h3 class="mt-4 ml-12 cursor-pointer hover:opacity-80 hover:-translate-y-1 transition-all">Akce</h3>
+      <h3 class="mt-4 cursor-pointer hover:opacity-80 hover:-translate-y-1 transition-all">Akce</h3>
     </a>
   </nav>
 
-  <header class="relative flex flex-col justify-center text-center mt-[165px]">
-    <h2 class="uppercase text-skaut-orange text-[40px] text-shadow-2xl">Skautský oddíl</h2>
-    <h1 class="uppercase text-[67px] text-white index-title text-shadow-2xl" id="title">Trojka Česká Třebová</h1>
+  <header class="relative flex flex-col justify-center text-center mt-40">
+    <h2 class="uppercase text-skaut-orange text-[30px] md:text-[40px] text-shadow-2xl">Skautský oddíl</h2>
+    <h1 class="uppercase text-[30px] md:text-[67px] text-white index-title text-shadow-2xl inline-block" id="title"><span class="md:hidden">3.</span><span class="hidden md:inline">Trojka</span> Česká Třebová</h1>
   </header>
 
-  <div class="relative bg-[#1d1d1b] opacity-70 h-[500px] w-full mt-10 z-10 p-7">
+  <div class="absolute bg-[#1d1d1b] opacity-70 p-2 w-full z-100 md:p-7 bottom-0 max-h-[370px] overflow-y-auto">
     <div
-      class="text-[20px] relative justify-center text-center font-[Skaut-text] mx-[180px] opacity-100 z-20 mt-[55px]">
+      class="mx-4 text-[15px] relative justify-center text-center font-[Skaut-text] opacity-100 z-20 mt-[40px] md:mt-[55px] md:text-[20px] md:mx-[180px]">
       <div
         class="text-white relative bg-transparent transition-all rounded hover:-translate-y-1 hover:bg-oddil-hover mb-7">
         Středisko Javor (domov Františka Navary) se nachází na okraji města Česká Třebová u výpadovky na Litomyšl po
