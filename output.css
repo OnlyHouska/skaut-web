@@ -1679,6 +1679,10 @@ video {
     margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
+  .md\:overflow-hidden {
+    overflow: hidden;
+  }
+
   .md\:p-7 {
     padding: 1.75rem;
   }
