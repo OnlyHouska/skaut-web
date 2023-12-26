@@ -12,6 +12,57 @@
       src: url(../src/fonts/TheMixC5-4_SemiLight.otf);
     }
 
+    @media (min-width: 768px) {
+      content {
+        display: flex;
+        justify-content: center;
+        font-family: Skaut-text;
+        text-align: center;
+      }
+
+      bg-gradient {
+        z-index: -10;
+        top: 0;
+        left: 0;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        background: rgb(252, 165, 165);
+        background: linear-gradient(144deg, rgba(252, 165, 165, 1) 8%, rgba(254, 202, 202, 1) 84%);
+      }
+
+      error {
+        margin-top: 135px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      error div {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin: auto;
+        height: fit-content;
+      }
+
+      error svg {
+        position: relative;
+        height: 112px;
+        margin-top: 110px;
+        margin-right: 32px;
+      }
+
+      error h1 {
+        font-size: 128px;
+        font-weight: 700;
+      }
+
+      error p {
+        font-size: large;
+      }
+    }
+
     content {
       display: flex;
       justify-content: center;
@@ -31,7 +82,7 @@
     }
 
     error {
-      margin-top: 135px;
+      margin-top: 100px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -40,19 +91,20 @@
     error div {
       display: flex;
       flex-direction: row;
-      margin-left: 36px;
+      width: 100%;
+      margin: auto;
       height: fit-content;
     }
 
     error svg {
       position: relative;
-      height: 112px;
-      margin-top: 110px;
+      height: 70px;
+      margin-top: 90px;
       margin-right: 32px;
     }
 
     error h1 {
-      font-size: 128px;
+      font-size: 90px;
       font-weight: 700;
     }
 
@@ -69,8 +121,8 @@
   <content>
     <error>
       <div>
-        <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.000000 512.000000"
+          preserveAspectRatio="xMidYMid meet">
 
           <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
             <path d="M3030 5105 c-1162 -141 -1909 -1318 -1544 -2433 62 -191 177 -405
@@ -88,21 +140,19 @@
         <h1>Ups...</h1>
       </div>
       <p style="margin-top: -35px;">Vypadá to že tahle stránka neexistuje. Nemáš někde chybu?</p>
-      <a
-            href="https://onlyhouska.github.io/trojka-ceska-trebova"><svg style="transition: all .2s; margin-top: -10px; height: 50px;" version="1.0" xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 512.000000 512.000000"
-              preserveAspectRatio="xMidYMid meet">
-             
-             <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
-             fill="#000000" stroke="none">
-             <path d="M2215 3971 c-24 -10 -300 -253 -675 -591 -750 -676 -737 -664 -761
+      <a href="https://onlyhouska.github.io/trojka-ceska-trebova"><svg
+          style="transition: all .2s; margin-top: -10px; height: 50px;" version="1.0" xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+          <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+            <path d="M2215 3971 c-24 -10 -300 -253 -675 -591 -750 -676 -737 -664 -761
              -715 -25 -54 -25 -156 0 -212 26 -57 1327 -1267 1399 -1300 64 -31 141 -30
              207 1 145 67 189 246 92 373 -18 23 -211 207 -431 410 l-398 368 1268 5 1269
              5 40 22 c90 48 135 123 135 223 0 100 -45 175 -135 223 l-40 22 -1262 5 -1262
              5 428 386 c474 429 471 425 471 541 -1 103 -54 188 -145 229 -53 24 -147 24
-             -200 0z"/>
-             </g>
-             </svg></a
+             -200 0z" />
+          </g>
+        </svg></a>
     </error>
   </content>
 </body>

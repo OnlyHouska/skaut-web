@@ -17,10 +17,12 @@ function handleScroll() {
   var scrollPosition = window.scrollY;
 
   var maxScroll = 50;
-  if (scrollPosition > maxScroll) {
-    nav.style.top = '-100px';
+  if (window.innerWidth < 768) {
+    if (scrollPosition > maxScroll)
+      nav.style.top = '-100px';
+    else
+      nav.style.top = '0';
   }
-  else
-    nav.style.top = '0';
 }
+
 window.addEventListener('scroll', handleScroll);
