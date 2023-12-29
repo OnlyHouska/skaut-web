@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="output.css">
 </head>
 
-<body class="overflow-visible">
+<body>
   <context-menu
     class="transition-opacity font-[Skaut-text] bg-white border-solid border-gray-500 drop-shadow-lg py-3 w-40 absolute top-0 left-0 px-3"
     id="custom-cm" style="z-index: 100;">
@@ -20,21 +20,27 @@
     <div class="my-2 border-b-2 border-gray-200"></div>
     <a class="block py-1 cursor-pointer transition-all hover:bg-gray-300 rounded-sm pl-1"
       href="https://javorct.app.levitio.com">Přihlásit se</a>
-    <a class="block py-1 cursor-pointer transition-all hover:bg-gray-300 rounded-sm pl-1" href="pages/akce.html">Kalendář
+    <a class="block py-1 cursor-pointer transition-all hover:bg-gray-300 rounded-sm pl-1"
+      href="pages/akce.html">Kalendář
       akcí</a>
     <a class="block py-1 cursor-pointer transition-all hover:bg-gray-300 rounded-sm pl-1"
       href="pages/galerie.html">Galerie</a>
   </context-menu>
   <script src="src/script/contextMenu.js"></script>
 
-  <div class="fixed top-0 left-0 w-full h-full object-cover bg-cover bg-center" style="background-image: url('src/background.jpeg')">
-  </div>
+  <div w3-include-html="include/alert.html"></div>
+  <script src="src/script/alert.js"></script>
 
   <nav
-  class="top-0 fixed flex flex-row justify-center w-full bg-[#ffffffa6] z-50 text-[#2f4d36] h-[60px] sm:h-[65px] md:h-[70px] text-base space-x-5 md:text-2xl md:space-x-8 sm:text-lg">
+    class="top-0 fixed flex flex-row justify-center w-full bg-[#ffffffa6] z-40 text-[#2f4d36] h-[60px] sm:h-[65px] md:h-[70px] text-base space-x-5 md:text-2xl md:space-x-8 sm:text-lg"
+    id="header">
+    <!-- <img src="../src/icons/settings.png" alt="Nastavení"
+      class="absolute right-0 top-0 h-7 mt-5 mr-2 cursor-pointer hidden hover:rotate-180 transition-all duration-1000 md:block"
+      onclick="showAlert()"> -->
     <div>
-      <h3 onclick="OpenMenu()" class="ml-4 mt-4 cursor-pointer hover:opacity-80 hover:-translate-y-1 transition-all md:ml-0"
-        id="oddil_button">Oddíl</h3>
+      <h3 onclick="OpenMenu()"
+        class="ml-4 mt-4 cursor-pointer hover:opacity-80 hover:-translate-y-1 transition-all md:ml-0" id="oddil_button">
+        Oddíl</h3>
       <div
         class="w-28 transition-all opacity-0 hidden relative bg-[#ffffffa6] pl-3 pr-5 md:py-3 py-2 text-base rounded-br-[15px] mt-[20px] rounded-bl-[15px] md:mt-[22px] md:text-xl md:-ml-[14px] md:w-44"
         id="oddil_menu">
@@ -76,28 +82,42 @@
     </a>
   </nav>
 
-  <header class="relative flex flex-col justify-center text-center mt-40">
-    <h2 class="uppercase text-skaut-orange text-[30px] md:text-[40px] text-shadow-2xl">Skautský oddíl</h2>
-    <h1 class="uppercase text-[30px] md:text-[67px] text-white index-title text-shadow-2xl inline-block" id="title"><span class="md:hidden">3.</span><span class="hidden md:inline">Trojka</span> Česká Třebová</h1>
-  </header>
+  <content id="content">
+    <div class="fixed top-0 left-0 w-full h-full object-cover bg-cover bg-center"
+      style="background-image: url('src/background.jpeg')"></div>
+    <header class="relative flex flex-col justify-center text-center mt-40">
+      <h2 class="uppercase text-skaut-orange text-[30px] md:text-[40px] text-shadow-2xl">Skautský oddíl</h2>
+      <h1 class="uppercase text-[30px] md:text-[67px] text-white index-title text-shadow-2xl inline-block" id="title">
+        <span class="md:hidden">3.</span><span class="hidden md:inline">Trojka</span> Česká Třebová
+      </h1>
+    </header>
 
-  <div class="absolute bg-[#1d1d1b] opacity-70 p-2 w-full z-100 md:p-7 bottom-0 max-h-[370px] overflow-y-auto md:overflow-hidden">
     <div
-      class="mx-4 text-[15px] relative justify-center text-center font-[Skaut-text] opacity-100 z-20 mt-[40px] md:mt-[55px] md:text-[20px] md:mx-[180px]">
+      class="absolute bg-[#1d1d1b] opacity-70 p-2 w-full z-100 md:p-7 bottom-0 max-h-[370px] overflow-y-auto md:overflow-hidden">
       <div
-        class="text-white relative bg-transparent transition-all rounded hover:-translate-y-1 hover:bg-oddil-hover mb-7">
-        Středisko Javor (domov Františka Navary) se nachází na okraji města Česká Třebová u výpadovky na Litomyšl po
-        levé straně. V současné chvíli ho obývá 7 oddílů. Každému přísluší vlastní klubovna. <br>Středisko je vybaveno i
-        jednou, docela velikou, zasedací místností. <br>Adresa je:
-      </div>
-      <div class="text-[#f5b016] transition-all rounded hover:-translate-y-1 hover:bg-oddil-hover mb-7">
-        3. chlapecký oddíl<br>
-        Farská 113<br>
-        560 02 Česká Třebová
+        class="mx-4 text-[15px] relative justify-center text-center font-[Skaut-text] opacity-100 z-20 mt-[40px] md:mt-[55px] md:text-[20px] md:mx-[180px]">
+        <div
+          class="text-white relative bg-transparent transition-all rounded hover:-translate-y-1 hover:bg-oddil-hover">
+          Středisko Javor (domov Františka Navary) se nachází na okraji města Česká Třebová u výpadovky na Litomyšl po
+          levé straně. V současné chvíli ho obývá 7 oddílů. Každému přísluší vlastní klubovna. <br>Středisko je vybaveno
+          i
+          jednou, docela velikou, zasedací místností.
+        </div>
+        <div class="text-white relative bg-transparent mb-7 mt-2">Adresa je:</div>
+        <div class="text-[#f5b016] transition-all rounded hover:-translate-y-1 hover:bg-oddil-hover mb-7">
+          3. chlapecký oddíl<br>
+          Farská 113<br>
+          560 02 Česká Třebová
+        </div>
       </div>
     </div>
-  </div>
+  </content>
 
+  <script src="src/script/cookies.js"></script>
+  <script src="src/script/include.js"></script>
+  <script>
+    includeHTML();
+  </script>
   <noscript>Povolte JavaScript na vašem prohlížeči pro spuštění stránky</noscript>
 </body>
 

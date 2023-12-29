@@ -1,0 +1,14 @@
+<alert class="transition-all hidden absolute inset-0 z-50 opacity-0" id="alert">
+  <div
+    class="max-w-80 transtiion-all flex flex-col bg-gradient-to-br from-red-300 to-red-200 p-2 drop-shadow-lg overflow-y-auto overflow-x-hidden mb-20 relative w-full m-auto text-center border-solid border-black rounded-md border-2 shadow-lg mt-[60%] md:mt-64">
+    <h1 class="font-[Skaut-text] font-bold">Zdá se že něco nefunguje.</h1>
+    <p class="font-[Skaut-text]">Na téhle funkci se ještě pracuje. Ale neboj, nemělo by trvat dlouho a budeš ji moci
+      vyzkoušet!</p>
+    <close
+      class="relative mx-auto w-fit mt-5 flex flex-row justify-center gap-1 cursor-pointer mb-3 hover:-translate-y-0.5 transition-all"
+      onclick="closeAlert();" title="Zavřít">
+      <div class="left bg-black rounded-full h-1 w-5 -rotate-45 -mr-6"></div>
+      <div class="right bg-black rounded-full h-1 w-5 rotate-45"></div>
+    </close>
+  </div>
+</alert>

@@ -34,8 +34,9 @@
   </background>
 
   <div w3-include-html="../include/header.html"></div>
-
-  <content class="flex justify-center">
+  <div w3-include-html="../include/alert.html"></div>
+  <script src="../src/script/alert.js"></script>
+  <content class="flex justify-center transition-all" id="content">
     <box
       class="w-[800px] relative text-center transtiion-all flex flex-col bg-gradient-to-br from-[#ffffffa6] to-[#ffffff63] rounded-xl p-2 border-none drop-shadow-lg overflow-y-auto overflow-x-hidden mb-20 h-[470px] mx-3 mt-32 md:mx-0 md:mb-0 md:h-[400px] md:mt-48"
       id="ostrizi">
@@ -72,7 +73,7 @@
             class="font-[Skaut-text-italic]"> (Filip Tojmar),</span></li>
       </ul>
       <close
-        class="relative mx-auto mt-4 w-full h-5 flex flex-row justify-center gap-1 cursor-pointer mb-3 hover:-translate-y-0.5 transition-all"
+        class="relative mx-auto mt-4 w-fit h-5 flex flex-row justify-center gap-1 cursor-pointer mb-3 hover:-translate-y-0.5 transition-all"
         onclick="location.href = 'druziny.html'" title="Zavřít">
         <div class="left bg-black rounded-full h-2 w-10 -rotate-45 -mr-11"></div>
         <div class="right bg-black rounded-full h-2 w-10 rotate-45"></div>

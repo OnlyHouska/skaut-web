@@ -115,4 +115,5 @@ function getPosition(e) {
 
 function openMemberCard() {
   console.log(clickedElement.getAttribute('memberId'));
+  showAlert();
 }

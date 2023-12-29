@@ -13,6 +13,8 @@
 </head>
 
 <body>
+  <div w3-include-html="../include/alert.html"></div>
+  <script src="../src/script/alert.js"></script>
   <context-menu
     class="transition-opacity font-[Skaut-text] bg-white border-solid border-gray-500 drop-shadow-lg py-3 w-40 absolute top-0 left-0 px-3"
     id="custom-cm" style="z-index: 100;">
@@ -27,16 +29,19 @@
   </context-menu>
 
   <script src="../src/script/contextMenu.js"></script>
+
   <background>
     <div class="fixed top-0 left-0 w-full h-full bg-gradient-to-br from-[#b1c29b] to-[#7ea263]"></div>
   </background>
 
   <div w3-include-html="../include/header.html"></div>
+  <div w3-include-html="../include/alert.html"></div>
 
-  <content class="flex justify-center">
-    <grid class="relative grid auto-cols-fr justify-center text-center align-center gap-14 gird-rows-3 mt-32 text-base md:mt-60 md:grid-cols-3 md:text-base sm:text-base">
+  <content class="flex justify-center transition-all" id="content">
+    <grid
+      class="relative grid auto-cols-fr text-center align-center gap-14 gird-rows-3 mt-32 text-base md:mt-60 md:grid-cols-3 md:text-base sm:text-base">
       <box
-        class="transtiion-all flex flex-col bg-gradient-to-br from-[#ffffffa6] to-[#ffffff63] rounded-xl mr-5 p-2 border-none drop-shadow-lg w-[300px] h-[370px] md:w-[27vw] md:h-[calc(45vh+3vw)] md:pt-8 sm:w-[350px] sm:h-[400px] overflow-y-auto"
+        class="transtiion-all flex flex-col bg-gradient-to-br from-[#ffffffa6] to-[#ffffff63] rounded-xl p-2 border-none drop-shadow-lg w-[300px] h-[370px] md:w-[27vw] md:h-[calc(45vh+3vw)] md:pt-8 sm:w-[350px] sm:h-[400px] overflow-y-auto"
         id="racci">
         <h1>Racci</h1>
         <p class="font-[Skaut-text-italic]">"Racci to jsou kamarádi, legraci mají všichni rádi, skauting to je zábava,
@@ -52,17 +57,19 @@
           <p class="font-[Skaut-text-bold]">Podrádce: <span class="font-[Skaut-text]">Konipas <span
                 class="font-[Skaut-text-italic]">(Jakub Tojmar)</span></span></p><br>
         </div>
-        <more title="Zobrazit více" class="h-5 flex flex-row justify-center gap-1 cursor-pointer mt-3 hover:-translate-y-0.5 transition-all"
+        <more title="Zobrazit více"
+          class="h-5 flex flex-row justify-center gap-1 cursor-pointer mt-3 hover:-translate-y-0.5 transition-all"
           onclick="OpenMore(0)">
           <div class="dot bg-black rounded-full h-2 w-2"></div>
           <div class="dot bg-black rounded-full h-2 w-2"></div>
           <div class="dot bg-black rounded-full h-2 w-2"></div>
         </more>
-        <img title="Zkopírovat" class="absolute h-6 bottom-2 right-2 transition-all active:scale-90 cursor-pointer hover:-translate-y-0.5"
+        <img title="Zkopírovat"
+          class="absolute h-6 bottom-2 right-2 transition-all active:scale-90 cursor-pointer hover:-translate-y-0.5"
           onclick="CopyInfo(0)" src="../src/icons/copy.png" alt="Zkopírovat informace o družině">
       </box>
       <box
-        class="flex flex-col bg-gradient-to-br from-[#ffffffa6] to-[#ffffff63] rounded-xl w-[300px] h-[370px] mr-5 p-2 border-none drop-shadow-lg md:w-[27vw] md:h-[calc(45vh+3vw)] md:pt-8 sm:w-[350px] sm:h-[400px] overflow-y-auto"
+        class="flex flex-col bg-gradient-to-br from-[#ffffffa6] to-[#ffffff63] rounded-xl w-[300px] h-[370px] p-2 border-none drop-shadow-lg md:w-[27vw] md:h-[calc(45vh+3vw)] md:pt-8 sm:w-[350px] sm:h-[400px] overflow-y-auto"
         id="krahujci">
         <h1>Krahujci</h1>
         <p class="font-[Skaut-text-italic]">"Krahujci a krahujčata, hrajeme si kde se dá, my jsme Trojka Třebová!"</p>
@@ -79,17 +86,19 @@
           <p class="font-[Skaut-text-bold]">Podrádce: <span class="font-[Skaut-text]">Hasič <span
                 class="font-[Skaut-text-italic]">(Filip Daniel Gregar)</span></span></p>
         </div>
-        <more title="Zobrazit více" class="h-5 flex flex-row justify-center gap-1 cursor-pointer mt-3 hover:-translate-y-0.5 transition-all"
+        <more title="Zobrazit více"
+          class="h-5 flex flex-row justify-center gap-1 cursor-pointer mt-3 hover:-translate-y-0.5 transition-all"
           onclick="OpenMore(1)">
           <div class="dot bg-black rounded-full h-2 w-2"></div>
           <div class="dot bg-black rounded-full h-2 w-2"></div>
           <div class="dot bg-black rounded-full h-2 w-2"></div>
         </more>
-        <img title="Zkopírovat" class="absolute h-6 bottom-2 right-2 transition-all active:scale-90 cursor-pointer hover:-translate-y-0.5"
+        <img title="Zkopírovat"
+          class="absolute h-6 bottom-2 right-2 transition-all active:scale-90 cursor-pointer hover:-translate-y-0.5"
           onclick="CopyInfo(1)" src="../src/icons/copy.png" alt="Zkopírovat informace o družině">
       </box>
       <box
-        class="flex flex-col bg-gradient-to-br from-[#ffffffa6] to-[#ffffff63] rounded-xl w-[300px] h-[370px] mr-5 p-2 border-none drop-shadow-lg mb-16 md:mb-0 md:w-[27vw] md:h-[calc(45vh+3vw)] md:pt-8 sm:w-[350px] sm:h-[400px] overflow-y-auto"
+        class="flex flex-col bg-gradient-to-br from-[#ffffffa6] to-[#ffffff63] rounded-xl w-[300px] h-[370px] p-2 border-none drop-shadow-lg mb-16 md:mb-0 md:w-[27vw] md:h-[calc(45vh+3vw)] md:pt-8 sm:w-[350px] sm:h-[400px] overflow-y-auto"
         id="ostrizi">
         <h1>Ostříži</h1>
         <p class="font-[Skaut-text-italic]">"Voda, vzduch, slunce, jas, družina Ostřížů zdraví vás!"</p>
@@ -106,13 +115,15 @@
           <p class="font-[Skaut-text-bold]">Podrádce: <span class="font-[Skaut-text]">Kapucín <span
                 class="font-[Skaut-text-italic]">(Šimon Urban)</span></span></p>
         </div>
-        <more title="Zobrazit více" class="h-5 flex flex-row justify-center gap-1 cursor-pointer mt-3 hover:-translate-y-0.5 transition-all"
+        <more title="Zobrazit více"
+          class="h-5 flex flex-row justify-center gap-1 cursor-pointer mt-3 hover:-translate-y-0.5 transition-all"
           onclick="OpenMore(2)">
           <div class="dot bg-black rounded-full h-2 w-2"></div>
           <div class="dot bg-black rounded-full h-2 w-2"></div>
           <div class="dot bg-black rounded-full h-2 w-2"></div>
         </more>
-        <img title="Zkopírovat" class="absolute h-6 bottom-2 right-2 transition-all active:scale-90 cursor-pointer hover:-translate-y-0.5"
+        <img title="Zkopírovat"
+          class="absolute h-6 bottom-2 right-2 transition-all active:scale-90 cursor-pointer hover:-translate-y-0.5"
           onclick="CopyInfo(2)" src="../src/icons/copy.png" alt="Zkopírovat informace o družině">
       </box>
     </grid>
