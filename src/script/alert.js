@@ -25,3 +25,9 @@ function closeAlert() {
     alert.classList.add('hidden');
   }, 1);
 }
+
+window.onkeyup = function (e) {
+  if (e.keyCode === 27) {
+    closeAlert();
+  }
+}
