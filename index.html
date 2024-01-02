@@ -18,12 +18,12 @@
     id="custom-cm" style="z-index: 100;">
     <div class="pl-1">Rychlé akce</div>
     <div class="my-2 border-b-2 border-gray-200"></div>
-    <a class="block py-1 cursor-pointer transition-all hover:bg-gray-300 rounded-sm pl-1"
+    <a class="block py-1 cursor-pointer transition-all md:hover:bg-gray-300 rounded-sm pl-1"
       href="https://javorct.app.levitio.com">Přihlásit se</a>
-    <a class="block py-1 cursor-pointer transition-all hover:bg-gray-300 rounded-sm pl-1"
+    <a class="block py-1 cursor-pointer transition-all md:hover:bg-gray-300 rounded-sm pl-1"
       href="pages/akce.html">Kalendář
       akcí</a>
-    <a class="block py-1 cursor-pointer transition-all hover:bg-gray-300 rounded-sm pl-1"
+    <a class="block py-1 cursor-pointer transition-all md:hover:bg-gray-300 rounded-sm pl-1"
       href="pages/galerie.html">Galerie</a>
   </context-menu>
   <script src="src/script/contextMenu.js"></script>
@@ -35,27 +35,27 @@
     class="top-0 fixed flex flex-row justify-center w-full bg-[#ffffffa6] z-40 text-[#2f4d36] h-[60px] sm:h-[65px] md:h-[70px] text-base space-x-5 md:text-2xl md:space-x-8 sm:text-lg"
     id="header">
     <!-- <img src="../src/icons/settings.png" alt="Nastavení"
-      class="absolute right-0 top-0 h-7 mt-5 mr-2 cursor-pointer hidden hover:rotate-180 transition-all duration-1000 md:block"
+      class="absolute right-0 top-0 h-7 mt-5 mr-2 cursor-pointer hidden md:hover:rotate-180 transition-all duration-1000 md:block"
       onclick="showAlert()"> -->
     <div>
       <h3 onclick="OpenMenu()"
-        class="ml-4 mt-4 cursor-pointer hover:opacity-80 hover:-translate-y-1 transition-all md:ml-0" id="oddil_button">
+        class="ml-4 mt-4 cursor-pointer md:hover:opacity-80 md:hover:-translate-y-1 transition-all md:ml-0" id="oddil_button">
         Oddíl</h3>
       <div
         class="w-28 transition-all opacity-0 hidden relative bg-[#ffffffa6] pl-3 pr-5 md:py-3 py-2 text-base rounded-br-[15px] mt-[20px] rounded-bl-[15px] md:mt-[22px] md:text-xl md:-ml-[14px] md:w-44"
         id="oddil_menu">
         <ul>
-          <li class="transition-all mb-2 hover:opacity-80 active:scale-105 hover:translate-x-[2px]">
+          <li class="transition-all mb-2 md:hover:opacity-80 active:scale-105 md:hover:translate-x-[2px]">
             <a href="pages/oddil.html">
               <h3>O Nás</h3>
             </a>
           </li>
-          <li class="transition-all mb-2 hover:opacity-80 active:scale-105 hover:translate-x-[2px]">
+          <li class="transition-all mb-2 md:hover:opacity-80 active:scale-105 md:hover:translate-x-[2px]">
             <a href="pages/kde_jsme.html">
               <h3>Kde Jsme</h3>
             </a>
           </li>
-          <li class="transition-all hover:opacity-80 active:scale-105 hover:translate-x-[2px]">
+          <li class="transition-all md:hover:opacity-80 active:scale-105 md:hover:translate-x-[2px]">
             <a href="pages/historie.html">
               <h3>Historie</h3>
             </a>
@@ -64,21 +64,21 @@
       </div>
     </div>
     <a href="pages/druziny.html">
-      <h3 class="mt-4 cursor-pointer hover:opacity-80 hover:-translate-y-1 transition-all">Družiny</h3>
+      <h3 class="mt-4 cursor-pointer md:hover:opacity-80 md:hover:-translate-y-1 transition-all">Družiny</h3>
     </a>
     <div
       class="hidden relative bg-[#ffffffa6] mt-[70px] h-24 w-44 rounded-bl-full rounded-br-full justify-center align-middle md:flex">
       <a href="https://skaut.cz" target="_blank">
         <img
-          class="relative h-40 z-10 -mt-[65px] cursor-pointer opacity-100 transition-all hover:transform hover:scale-[1.02]"
+          class="relative h-40 z-10 -mt-[65px] cursor-pointer opacity-100 transition-all md:hover:transform md:hover:scale-[1.02]"
           src="src/icons/skaut-logo.png" alt="SKAUT LOGO">
       </a>
     </div>
     <a href="pages/galerie.html">
-      <h3 class="mt-4 cursor-pointer hover:opacity-80 hover:-translate-y-1 transition-all">Galerie</h3>
+      <h3 class="mt-4 cursor-pointer md:hover:opacity-80 md:hover:-translate-y-1 transition-all">Galerie</h3>
     </a>
     <a href="pages/akce.html">
-      <h3 class="mt-4 cursor-pointer hover:opacity-80 hover:-translate-y-1 transition-all">Akce</h3>
+      <h3 class="mt-4 cursor-pointer md:hover:opacity-80 md:hover:-translate-y-1 transition-all">Akce</h3>
     </a>
   </nav>
 
@@ -98,14 +98,14 @@
       <div
         class="mx-4 text-[15px] relative justify-center text-center font-[Skaut-text] opacity-100 z-20 mt-[40px] md:mt-[55px] md:text-[20px] md:mx-[180px]">
         <div
-          class="text-white relative bg-transparent transition-all rounded hover:-translate-y-1 hover:bg-oddil-hover">
+          class="text-white relative bg-transparent transition-all rounded md:hover:-translate-y-1 md:hover:bg-oddil-hover">
           Středisko Javor (domov Františka Navary) se nachází na okraji města Česká Třebová u výpadovky na Litomyšl po
           levé straně. V současné chvíli ho obývá 7 oddílů. Každému přísluší vlastní klubovna. <br>Středisko je vybaveno
           i
           jednou, docela velikou, zasedací místností.
         </div>
         <div class="text-white relative bg-transparent mb-7 mt-2">Adresa je:</div>
-        <div class="text-[#f5b016] transition-all rounded hover:-translate-y-1 hover:bg-oddil-hover mb-7">
+        <div class="text-[#f5b016] transition-all rounded md:hover:-translate-y-1 md:hover:bg-oddil-hover mb-7">
           3. chlapecký oddíl<br>
           Farská 113<br>
           560 02 Česká Třebová
